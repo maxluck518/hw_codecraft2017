@@ -1,0 +1,505 @@
+/*
+ * *************************************************************************
+ * 1. not consider: - loop
+ * 2. not consider: max flow can't afford the need of customer
+ * 3. no interface for server_id
+ * 4. flow can be negative but cost is always non-negative
+ * *************************************************************************
+ */
+// cout << "for test 0" << endl;
+#include <iostream>					// for cout etc.
+#include <algorithm>				// for sort algorithm
+#include <time.h>					// for random seed
+#include <math.h>					// for abs()
+#include "deploy.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <string.h>
+#include <vector>
+#include <queue>
+#include <stack>
+// using namespace std;
+
+int  GA_TARSIZE = 0;
+
+
+struct ga_struct 
+{
+	string  server;			// 1:biuld server here ;  0:not
+	int serverNum;
+	vector<int> server_id;
+	int fitness;					// its fitness
+};
+
+struct edge{
+    int from,to,cap,flow,cost;
+}; 
+
+struct mcmf{ 
+    int n,m,s,t; //n:v_num   m:e_num
+    int server_cost;
+    vector<Edge> edges; 
+    vector<int> G[MAX]; 
+    int inq[MAX]; 
+    int d[MAX]; 
+    int p[MAX]; 
+    int a[MAX]; 
+    int cus[MAX];
+
+    void init(int n){ 
+        this->n = n; 
+        for(int i = 0;i < n;i++) G[i].clear(); 
+        edges.clear(); 
+    } 
+
+    void copy(MCMF *cdn){
+        this->n = cdn->n;
+        this->m = cdn->m;
+        this->s = cdn->s;
+        this->t = cdn->t;
+        this->server_cost = cdn->server_cost;
+
+
+    }
+
+    void AddEdge(int from,int to,int cap,int cost){ 
+        edges.push_back((Edge){from,to,cap,0,cost}); 
+        edges.push_back((Edge){to,from,cap,0,cost}); 
+        m = edges.size(); 
+        G[from].push_back(m-2); 
+        G[to].push_back(m-1); 
+    } 
+
+    void AddSuperS(int to){ 
+        edges.push_back((Edge){this->s,to,INF,0,0}); 
+        edges.push_back((Edge){to,this->s,-INF,0,0}); 
+        m = edges.size(); 
+        G[this->s].push_back(m-2); 
+        G[to].push_back(m-1); 
+    } 
+
+    void AddSuperT(int from,int cap){ 
+        edges.push_back((Edge){from,this->t,cap,0,0}); 
+        edges.push_back((Edge){this->t,from,-INF,0,0}); 
+        m = edges.size(); 
+        G[from].push_back(m-2); 
+        G[this->t].push_back(m-1); 
+    } 
+
+    void SaveCustomer(int customer,int netnode){ 
+        /* save the num. of the customer */
+        this->cus[netnode] = customer;
+    }
+
+    bool FlowCheck(int flow){
+        vector<int> ::iterator it;
+        int max_flow = 0;
+        for(it = G[this->t].begin();it != G[this->t].end();it ++){
+           max_flow += edges[(*it)^1].cap;
+        }
+        return (flow == max_flow);
+    }
+
+    void test(){
+        vector<Edge> ::iterator it;
+        cout << this->m << '\t';
+        cout << this->n << '\t';
+        cout << this->server_cost << '\n';
+        cout << this->s << '\t';
+        cout << this->t << '\n';
+        for(it = this->edges.begin();it != edges.end();it ++){
+            cout << (*it).from << '\t';
+            cout << (*it).to<< '\t';
+            cout << (*it).cap<< '\t';
+            cout << (*it).flow<< '\t';
+            cout << (*it).cost<< endl;
+        }
+    }
+    //other functions 
+    //... 
+}; 
+
+
+void edge_check(Edge * e,MCMF * cdn){
+    // int cost = abs(e->cost);
+    int cost = abs(e->cost);
+    if(e->flow > 0)
+        if(e->flow < e->cap)
+            e->cost = cost;
+        else
+            e->cost = INF;
+    else if(e->flow < 0)
+        if(abs(e->flow) < e->cap)
+            // e->cost = -cost;
+            e->cost = cost;
+        else
+            e->cost = INF;
+    else
+        if(e->from == cdn->t || e->to == cdn->s)
+            e->cost = INF;
+        else 
+            e->cost = cost;
+}
+
+
+void deploy_server(char * topo[MAX_EDGE_NUM], int line_num,char * filename)
+{
+
+    char * topo_file = new char[MAX_EDGE_NUM]();
+    MCMF *cdn = new MCMF;
+    topo_init(topo,line_num,cdn);
+
+    // cout << "The min trace of this turn is:"<< '\t';
+    cout << "The trace of cdn is: "<< endl; 
+    // cout << "e.from" << '-'<< "e.to" << ":\t"<< "a[e.to]" << '\t';
+    // cout << "d[e.to]" << '\t' <<"p[e.to]"<< endl;
+    // cout << Mincost(cdn->s,cdn->t,cdn,topo_file) << endl; 
+    Ga_For_MCF(cdn,topo_file);
+    cdn->test(); 
+
+    write_result(topo_file, filename);
+
+}
+
+void InsertServer(MCMF * cdn,vector<int> server_id){
+    int n = server_id.size();
+    for(int i = 0;i < n;i++){
+        cdn->AddSuperS(server_id[i]);
+    }
+}
+
+void topo_init(char * topo[MAX_EDGE_NUM],int line_num,MCMF * cdn){
+    int pNum[line_num][4];
+    int tmp = 0;
+    int k = 0;
+    // int array[] = {7,13,15,22,37,38,43};
+    // int array[] = {6,7,13,17,35,41,48};
+    // int array[] = {12,18,23,29,31,38,48};
+    // int array[] = {10,22,26,29,35};
+    // int array[] = {12,15,20,22,26,37,48};
+    // int array[] = {20,26,38,22,48,15,12,28,37};
+    // int arraysize = sizeof(array)/sizeof(int);
+    // vector<int> server_id(array,array + arraysize);
+    for(int i = 0;i < line_num;i++)
+        for(int j = 0;j < (int)strlen(topo[i]);j++)
+            if(topo[i][j] == '\r' || topo[i][j] == '\n'){
+                pNum[i][k++]= tmp;
+                tmp = 0;
+                k = 0;
+                break;
+            }
+            else if(topo[i][j] != ' ')
+                tmp = tmp * 10 + (int)(topo[i][j] - 48);
+            else{
+                pNum[i][k++]= tmp;
+                tmp = 0;
+            }
+    /* create cdn graph */
+    /*
+     * case 0: get edge_num,cus_num,net_num 0
+     * case 1: get server cost 2 
+     * case 2: get edge 4～3+edge_num
+     * case 3: get customer 5+edge_num ~ 4+edge_num+cus_num
+     * start[4] = {0,2,4,5+edge_num}
+     * end[4] = {0,2,4+edge_num,5+edge_num+cus_num}
+     */
+    /* case 0 */
+    int net_num = pNum[0][0];
+    int edge_num = pNum[0][1];
+    int cus_num = pNum[0][2];
+
+    GA_TARSIZE = net_num;
+
+    cdn->init(net_num + 2);
+    cdn->s = net_num;
+    cdn->t = net_num +1;
+
+    /* case 1 */
+    int server_cost = pNum[2][0];
+    cdn->server_cost = server_cost;
+    /* case 2,3 pre */
+    int start[4] = {0,2,4,-1};
+    int end[4] = {0,2,-1,-1};
+    start[3] = 5 + edge_num;
+    end[2] = 4 + edge_num;
+    end[3] = 5 + edge_num + cus_num;
+    /* case 2 */
+    for(int i = start[2];i < end[2];i++)
+        cdn->AddEdge(pNum[i][0],pNum[i][1],pNum[i][2],pNum[i][3]);
+    // InsertServer(cdn,server_id); // need not to add super S
+    /* case 3 */
+    for(int i = start[3];i < end[3];i++){
+        cdn->AddSuperT(pNum[i][1],pNum[i][2]);
+        cdn->SaveCustomer(pNum[i][0],pNum[i][1]);
+    }
+
+}
+
+bool BellmanFord(int s,int t,int &flow,int &cost,MCMF *cdn,char *trace){
+    for(int i = 0;i < cdn->n;i++) cdn->d[i]=INF;
+    memset(cdn->inq,0,sizeof(cdn->inq));
+    cdn->d[s] = 0;
+    cdn->inq[s] = 1;
+    cdn->p[s] = 0;
+    cdn->a[s] = INF;
+
+    queue<int> Q;
+    Q.push(s);
+
+    while(!Q.empty()){
+        int u = Q.front();
+        Q.pop();
+        cdn->inq[u] = 0;
+        // cout << u << endl;
+        for(int i = 0;i < cdn->G[u].size();i++){
+            Edge& e = cdn->edges[cdn->G[u][i]];
+            if(e.cap > e.flow && cdn->d[e.to] > cdn->d[u] + e.cost){
+                cdn->a[e.to] = min(cdn->a[u],e.cap - e.flow);
+                cdn->d[e.to] = cdn->d[u] + e.cost;
+                cdn->p[e.to] = cdn->G[u][i];
+                if(!cdn->inq[e.to]) {Q.push(e.to);cdn->inq[e.to] = 1;}
+                // cout << e.from << '-'<< e.to << ":\t"<< cdn->a[e.to] << '\t';
+                // cout << cdn->d[e.to] << '\t' <<cdn->p[e.to] << endl;
+            }
+            // if(cdn->d[e.to] <0)
+                // break;
+        }
+    }
+    
+    // cout << cdn->d[t] <<endl;
+    if(cdn->d[t] == INF) return false;
+    int u = t;
+    stack<int> tmp_trace;
+    tmp_trace.push(u);
+    while(u != s){
+        cdn->edges[cdn->p[u]].flow += cdn->a[t];
+        cdn->edges[cdn->p[u]^1].flow -= cdn->a[t];
+        edge_check(&cdn->edges[cdn->p[u]],cdn);
+        edge_check(&cdn->edges[cdn->p[u]^1],cdn);
+        u = cdn->edges[cdn->p[u]].from;
+
+        /* update the new cost 0 for an fixed server */
+        if(cdn->edges[cdn->p[u]].from == s){
+                /* update flow and cost in this turn */
+                flow += cdn->a[t];
+                cost += cdn->d[t] * cdn->a[t];
+                cout << "test for a & d:  "; 
+                cout << cdn->a[t] << '\t' << cdn->d[t]<<endl;
+                /* ***************************************** */
+        }
+        /* ***************************************** */
+        tmp_trace.push(u);
+    }
+    char *str = new char[MAX]();
+    int record = -1;
+    while(!tmp_trace.empty()){
+        u = tmp_trace.top();
+        tmp_trace.pop();
+        if(u != s && u != t){
+            sprintf(str,"%d",u);
+            if(record == -1){
+                strcat(trace,str);
+            }
+            else{
+                strcat(trace," ");
+                strcat(trace,str);
+            }
+            record = u;
+        }
+    }
+    /* save the customer num. and added flow in this turn. */
+    sprintf(str,"%d",cdn->cus[record]);
+    strcat(trace," ");
+    strcat(trace,str);
+
+    sprintf(str,"%d",cdn->a[t]);
+    strcat(trace," ");
+    strcat(trace,str);
+    /* *************************************************** */
+    delete str;
+
+    return true;
+
+}
+
+int Mincost(int s,int t,MCMF *cdn,char * output){
+    int flow = 0,cost = 0;
+    int n = 0;
+    char * tmp = new char[MAX_EDGE_NUM]();
+    char * trace = new char[MAX]();
+    char * str = new char[MAX]();
+    while(BellmanFord(s,t,flow,cost,cdn,trace))
+    {
+        // cout <<  trace << endl;
+        n++;
+        strcat(tmp,"\n");
+        strcat(tmp,trace);
+        memset(trace,0,sizeof(*trace));
+    }
+/* compute server cost first */
+    cost += (cdn->G[s]).size() * cdn->server_cost;
+    /* cout <<  (cdn->G[s]).size() << endl; */
+/* **************************** */
+/* check the correctness of the flow */
+    if(cdn->FlowCheck(flow))
+        cout << "The answer is right!" << endl;
+    else
+        cout << "No correct answer!" << endl;
+/* ******************************* */
+    strcat(tmp,"\0");
+    sprintf(str,"%d",n);
+    strcat(output,str);
+    strcat(output,"\n");
+    strcat(output,tmp);
+    // cout << output << endl;
+    delete tmp;
+    delete trace;
+    delete str;
+
+    return cost;
+}
+
+/* ********************************************************************************** */
+/*
+ * genetic algorithm defination
+ */
+
+void init_population(ga_vector &population, ga_vector &buffer ) 
+{
+	int tsize = GA_TARSIZE;
+
+	for (int i=0; i<GA_POPSIZE; i++) {
+		ga_struct citizen;
+		citizen.serverNum = 0;
+		citizen.fitness = 0;
+		citizen.server_id.clear();
+	
+		citizen.server.erase();
+		for (int j=0; j<tsize; j++){
+			//citizen.server[j] = ((1+rand()%100) > 85);
+			citizen.server += ((1+rand()%100) > 80)?'1':'0';
+			if(citizen.server[j]=='1'){
+				citizen.serverNum++;
+				citizen.server_id.push_back(j);
+			}
+		}
+
+		population.push_back(citizen);
+	}
+	buffer.resize(GA_POPSIZE);
+}
+
+
+int  MFCSolver(ga_struct citizen,MCMF * cdn,char * output){    //input : serverid   output : cost
+    InsertServer(cdn,citizen.server_id);
+	int cost = Mincost(cdn->s,cdn->t,cdn,output);
+    cout << "The cost in this turn is: " << cost << endl;
+	return cost;
+}
+
+
+inline void calc_fitness(ga_vector &population,MCMF * cdn,char * output)
+{
+    MCMF tmp;
+    tmp = *(cdn);
+    // tmp = *(cdn);
+    for (int i=0; i<GA_POPSIZE; i++) {
+        MCMF *test = new MCMF;
+        test = &tmp;
+        population[i].fitness = MFCSolver(population[i],test,output);
+        cout << "for test :  " << i <<endl;
+        delete test;
+        test = NULL;
+    }
+
+
+    // for (int i=0; i<GA_POPSIZE; i++) {
+        // population[i].fitness = MFCSolver(population[i],cdn,output);
+        // cout << "for test :  " << i <<endl;
+    // }
+}
+
+inline bool fitness_sort(ga_struct x, ga_struct y) {
+	return (x.fitness < y.fitness); 
+}
+
+inline void sort_by_fitness(ga_vector &population){ 
+	sort(population.begin(), population.end(), fitness_sort); 
+}
+
+void elitism(ga_vector &population, ga_vector &buffer, int esize ){
+	for (int i=0; i<esize; i++) {
+		buffer[i].serverNum = population[i].serverNum;
+		buffer[i].server = population[i].server;
+		buffer[i].fitness = population[i].fitness;
+		buffer[i].server_id = population[i].server_id;
+	}
+}
+
+inline void mutate(ga_struct &member){
+	int tsize = GA_TARSIZE;
+	int ipos = rand() % tsize;
+	if(member.server[ipos]=='1') member.server[ipos] = '0';
+	else member.server[ipos] = '1';
+}
+
+void mate(ga_vector &population, ga_vector &buffer){
+	int esize = GA_POPSIZE * GA_ELITRATE;
+	int tsize = GA_TARSIZE, spos, i1, i2;
+	// cout << "elitism" << endl;
+	elitism(population, buffer, esize);
+	// cout << "end   elitism" << endl;
+
+	// Mate the rest
+	for (int i=esize; i<GA_POPSIZE; i++) {
+		i1 = rand() % (GA_POPSIZE / 2);
+		i2 = rand() % (GA_POPSIZE / 2);
+		spos = rand() % tsize;
+		buffer[i].server = population[i1].server.substr(0, spos) + 
+			            population[i2].server.substr(spos, tsize - spos);
+	       
+		
+		// cout << "befor mutata" << endl;
+		if (rand() < GA_MUTATION) mutate(buffer[i]);
+		// cout << "after mutata" << endl;
+		buffer[i].server_id.clear();
+		buffer[i].serverNum = 0;
+
+		for (int j = 0; j < tsize; ++j)
+			if(buffer[i].server[j]=='1'){
+				buffer[i].serverNum++;
+				buffer[i].server_id.push_back(j);
+			}
+		 
+	}
+}
+
+inline void print_best(ga_vector &gav)
+{ cout << "Best: " << gav[0].server << " (" << gav[0].fitness << ")" << endl; }
+
+inline void swap(ga_vector *&population, ga_vector *&buffer){ 
+	ga_vector *temp = population; population = buffer; buffer = temp; 
+}
+
+
+void Ga_For_MCF(MCMF * cdn,char * output){
+	srand(unsigned(time(NULL)));
+	ga_vector pop_alpha, pop_beta;
+	ga_vector *population, *buffer;
+	init_population(pop_alpha, pop_beta);
+	population = &pop_alpha;
+	buffer = &pop_beta;
+	for (int i=0; i<GA_MAXITER; i++) {
+		calc_fitness(*population,cdn,output);		// calculate fitness
+		sort_by_fitness(*population);				// sort them
+		mate(*population, *buffer);					// mate the population together
+		swap(population, buffer);					// swap buffers
+        cout << "************************:  "<< i << endl;
+	}
+    cout << "done" << endl;
+    print_best(*population);
+}
+
+
+/* ********************************************************************************** */

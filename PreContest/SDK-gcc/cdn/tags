@@ -1,0 +1,211 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS	deploy.h	/^T ABS( const T x )$/;"	f
+ARC_CAP_MAX	deploy.h	45;"	d
+AddEdge	deploy.h	/^    void AddEdge(int from,int to,int cap,int cost){$/;"	f	struct:mcmf
+AddSuperS	deploy.h	/^    void AddSuperS(int to){$/;"	f	struct:mcmf
+AddSuperT	deploy.h	/^    void AddSuperT(int from,int cap){$/;"	f	struct:mcmf
+Add_Super_Arc	deploy.h	/^inline void MCFS::Add_Super_Arc(vector<int> server_list,graph_init* graph)$/;"	f	class:MCFS
+Arc_Basic	deploy.h	59;"	d
+Arc_Low	deploy.h	60;"	d
+Arc_Up	deploy.h	61;"	d
+BellmanFord	deploy.cpp	/^bool BellmanFord(int s,int t,int &flow,int &cost,MCMF *cdn){$/;"	f
+Bukejie	deploy.h	56;"	d
+CAP	deploy.h	/^    vector<int>  CAP;$/;"	m	struct:graph_init
+COST	deploy.h	/^    vector<int>  COST;$/;"	m	struct:graph_init
+Candidate_num_big	deploy.h	49;"	d
+Candidate_num_little	deploy.h	47;"	d
+Candidate_num_medium	deploy.h	48;"	d
+Candidiate	deploy.h	/^struct Candidiate$/;"	s
+Candy_Group_Num	deploy.h	/^    int Candy_Group_Num;$/;"	m	struct:MCFS
+Candy_Pivot	deploy.h	/^inline NSarc* MCFS::Candy_Pivot( void )$/;"	f	class:MCFS
+Candy_Size	deploy.h	/^    int Candy_Size;$/;"	m	struct:MCFS
+CompTrace	deploy.cpp	/^void CompTrace(MCMF *cdn,char *trace){  \/\/ for the output of trace$/;"	f
+Cost_Reduce	deploy.h	/^inline int MCFS::Cost_Reduce( NSarc *tmp )$/;"	f	class:MCFS
+DAlloc	deploy.h	/^inline void MCFS::DAlloc(void)$/;"	f	class:MCFS
+Deficit	deploy.h	/^    vector<int>  Deficit;  \/\/node鐨勬敹鏀?$/;"	m	struct:graph_init
+Edge	deploy.h	/^typedef struct edge Edge;$/;"	t	typeref:struct:edge
+Entering_Arc	deploy.h	/^    NSarc *Entering_Arc;$/;"	m	struct:NSnode
+Fake_Arc	deploy.h	/^    NSarc *Fake_Arc;$/;"	m	struct:MCFS
+Fake_Arc_End	deploy.h	/^    NSarc *Fake_Arc_End;$/;"	m	struct:MCFS
+Fake_Root	deploy.h	/^    NSnode *Fake_Root;$/;"	m	struct:MCFS
+Father	deploy.h	/^inline NSnode* MCFS::Father( NSnode *n, NSarc *a )$/;"	f	class:MCFS
+FinalMincost	deploy.cpp	/^int FinalMincost(int s,int t,MCMF *cdn,char *output){$/;"	f
+FlowCheck	deploy.h	/^    bool FlowCheck(int flow){$/;"	f	struct:mcmf
+From	deploy.h	/^    vector<int> From;    \/\/璧峰鐐?$/;"	m	struct:graph_init
+G	deploy.h	/^    vector<int> G[MAX];$/;"	m	struct:mcmf
+GA_ELITRATE	deploy.cpp	/^float GA_ELITRATE = 0.05;$/;"	v
+GA_MAXITER	deploy.h	42;"	d
+GA_MUTATION	deploy.h	40;"	d
+GA_MUTATIONRATE	deploy.cpp	/^float GA_MUTATIONRATE = 0.95;$/;"	v
+GA_POPSIZE	deploy.cpp	/^int GA_POPSIZE = 90;$/;"	v
+GA_TARSIZE	deploy.cpp	/^int GA_TARSIZE = 0;$/;"	v
+G_m	deploy.h	/^    int G_m;$/;"	m	struct:graph_init
+G_n	deploy.h	/^    int G_n;$/;"	m	struct:graph_init
+Ga_For_MCF	deploy.cpp	/^bool Ga_For_MCF(MCFS * f_cdn,graph_init * clean_graph,char * output){$/;"	f
+GetTop	deploy.h	/^    QElemType GetTop()$/;"	f	struct:LinkQueue
+Get_Arc_Cost	deploy.h	/^    long Get_Arc_Cost( void )$/;"	f	struct:MCFS
+Get_Type_Max	deploy.h	/^    Get_Type_Max() {}$/;"	f	class:Get_Type_Max
+Get_Type_Max	deploy.h	/^class Get_Type_Max$/;"	c
+HanMingDis	deploy.cpp	/^float HanMingDis = 0.9;$/;"	v
+Hot_list_big	deploy.h	52;"	d
+Hot_list_little	deploy.h	50;"	d
+Hot_list_medium	deploy.h	51;"	d
+Hotlist_Size	deploy.h	/^    int Hotlist_Size;$/;"	m	struct:MCFS
+INF	deploy.h	35;"	d
+INF	deploy.h	46;"	d
+INLINE	io.cpp	13;"	d	file:
+InitBase	deploy.h	/^inline void MCFS::InitBase(void)$/;"	f	class:MCFS
+InitNet	deploy.h	/^inline void MCFS::InitNet(graph_init *graph)$/;"	f	class:MCFS
+Init_Candy	deploy.h	/^inline void MCFS::Init_Candy( void )$/;"	f	class:MCFS
+InsertServer	deploy.cpp	/^void InsertServer(MCMF * cdn,vector<int> server_id){$/;"	f
+LinkQueue	deploy.h	/^typedef struct LinkQueue$/;"	s
+LinkQueue	deploy.h	/^}LinkQueue;$/;"	t	typeref:struct:LinkQueue
+MAX	deploy.h	34;"	d
+MAX_COST	deploy.h	/^    int MAX_COST;$/;"	m	struct:MCFS
+MAX_EDGE_NUM	lib/lib_io.h	4;"	d
+MAX_LINE_LEN	io.cpp	11;"	d	file:
+MAX_NODE_NUM	deploy.h	44;"	d
+MAlloc	deploy.h	/^inline void MCFS::MAlloc( void )$/;"	f	class:MCFS
+MCFS	deploy.h	/^    MCFS( int nmx = 0, int mmx = 0 )$/;"	f	struct:MCFS
+MCFS	deploy.h	/^struct MCFS$/;"	s
+MCMF	deploy.h	/^typedef struct mcmf MCMF;$/;"	t	typeref:struct:mcmf
+MFCSolver	deploy.cpp	/^inspire_interface  MFCSolver(MCFS *cdn,vector<int> server,graph_init* clean_graph){$/;"	f
+MllocCandy	deploy.h	/^inline void MCFS::MllocCandy(void) \/\/对于不同规模的图，使用不同的候选者ule参数$/;"	f	class:MCFS
+NO_SOLUTION	deploy.h	54;"	d
+NSarc	deploy.h	/^struct NSarc$/;"	s
+NSnode	deploy.h	/^struct NSnode$/;"	s
+NetId	deploy.h	/^    int NetId;$/;"	m	struct:QElemType
+Now_Candy	deploy.h	/^    int Now_Candy;$/;"	m	struct:MCFS
+PRINT	io.cpp	15;"	d	file:
+PRINT	io.cpp	17;"	d	file:
+PopInitRate	deploy.cpp	/^int PopInitRate = 10;$/;"	v
+Potential	deploy.h	/^inline void MCFS::Potential( NSnode *r, int delta )$/;"	f	class:MCFS
+QElemType	deploy.h	/^typedef struct QElemType$/;"	s
+QElemType	deploy.h	/^}QElemType;$/;"	t	typeref:struct:QElemType
+QIWEI_FIND	deploy.h	55;"	d
+QNode	deploy.h	/^typedef struct QNode$/;"	s
+QNode	deploy.h	/^}QNode, *QueuePtr;$/;"	t	typeref:struct:QNode
+Qswap	deploy.h	/^    void Qswap(LinkQueue &P){$/;"	f	struct:LinkQueue
+QueuePtr	deploy.h	/^}QNode, *QueuePtr;$/;"	t	typeref:struct:QNode
+ReadData	deploy.h	/^inline void MCFS::ReadData(char * topo[MAX_EDGE_NUM],int line_num,graph_init *graph)$/;"	f	class:MCFS
+Refresh_Tree	deploy.h	/^inline void MCFS::Refresh_Tree( NSarc *h, NSarc *k, NSnode *h1, NSnode *h2, NSnode *k1, NSnode *k2 )$/;"	f	class:MCFS
+SaveCustomer	deploy.h	/^    void SaveCustomer(int customer,int netnode){$/;"	f	struct:mcmf
+ServerCheck	deploy.h	/^    vector<int> ServerCheck(){$/;"	f	struct:mcmf
+SetParent	deploy.cpp	/^int SetParent(ga_vector &population){$/;"	f
+Simplex	deploy.h	/^inline void MCFS::Simplex( void )$/;"	f	class:MCFS
+Swap	deploy.h	/^void Swap( T &v1, T &v2 )$/;"	f
+TIME_LIMIT	deploy.cpp	/^int TIME_LIMIT = 85;$/;"	v
+TO	deploy.h	/^    vector<int> TO;    \/\/ 缁堟鐐?$/;"	m	struct:graph_init
+Tmp_Candy_Size	deploy.h	/^    int Tmp_Candy_Size;$/;"	m	struct:MCFS
+__LIB_IO_H__	lib/lib_io.h	2;"	d
+__LIB_TIME_H__	lib/lib_time.h	2;"	d
+__route_h__	deploy.h	2;"	d
+a	deploy.h	/^    int a[MAX];$/;"	m	struct:mcmf
+absRC	deploy.h	/^    int absRC;$/;"	m	struct:Candidiate
+arc	deploy.h	/^    NSarc *arc;$/;"	m	struct:Candidiate
+arc_array_begin	deploy.h	/^    NSarc *arc_array_begin;$/;"	m	struct:MCFS
+arc_array_end	deploy.h	/^    NSarc *arc_array_end;$/;"	m	struct:MCFS
+arc_max_num	deploy.h	/^    int arc_max_num;$/;"	m	struct:MCFS
+balance	deploy.h	/^    int balance;$/;"	m	struct:NSnode
+calc_fitness	deploy.cpp	/^inline void calc_fitness(ga_vector &population,graph_init *clean_graph)$/;"	f
+candy	deploy.h	/^    Candidiate *candy;$/;"	m	struct:MCFS
+cap	deploy.h	/^    int cap;$/;"	m	struct:NSarc
+cap	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+clear	deploy.h	/^    void clear()$/;"	f	struct:LinkQueue
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:ga_struct
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:mcmf
+cost	deploy.h	/^    int cost;$/;"	m	struct:NSarc
+cost	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+cus	deploy.h	/^    int cus[MAX];$/;"	m	struct:mcmf
+d	deploy.h	/^    int d[MAX];$/;"	m	struct:mcmf
+data	deploy.h	/^    QElemType data;$/;"	m	struct:QNode
+de_Queue	deploy.h	/^    void de_Queue()$/;"	f	struct:LinkQueue
+de_Queue_where	deploy.h	/^    void de_Queue_where(int aver,QElemType &out)$/;"	f	struct:LinkQueue
+deploy_server	deploy.cpp	/^void deploy_server(char * topo[MAX_EDGE_NUM], int line_num,char * filename)$/;"	f
+depth	deploy.h	/^    int depth;$/;"	m	struct:NSnode
+dist	deploy.h	/^    int dist;$/;"	m	struct:QElemType
+edge	deploy.h	/^struct edge{$/;"	s
+edge_check	deploy.h	/^    void edge_check(Edge * e){$/;"	f	struct:mcmf
+edges	deploy.h	/^    vector<Edge> edges;$/;"	m	struct:mcmf
+elitism	deploy.cpp	/^void elitism(ga_vector &population, ga_vector &buffer, int esize ){$/;"	f
+en_Queue_Rear	deploy.h	/^    void en_Queue_Rear(QElemType e)$/;"	f	struct:LinkQueue
+en_Queue_Top	deploy.h	/^    void en_Queue_Top(QElemType e)$/;"	f	struct:LinkQueue
+fitness	deploy.h	/^	int fitness;					\/\/ its fitness$/;"	m	struct:ga_struct
+fitness_sort	deploy.cpp	/^inline bool fitness_sort(ga_struct x, ga_struct y) {$/;"	f
+flag	deploy.h	/^    char flag;$/;"	m	struct:NSarc
+flow	deploy.h	/^    int flow;$/;"	m	struct:NSarc
+flow	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+from	deploy.h	/^    NSnode *from;$/;"	m	struct:NSarc
+from	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+front	deploy.h	/^    QueuePtr front;$/;"	m	struct:LinkQueue
+ga_struct	deploy.h	/^struct ga_struct$/;"	s
+ga_vector	deploy.h	/^typedef vector<ga_struct> ga_vector;\/\/ for brevity$/;"	t
+getlength_Queue	deploy.h	/^    int getlength_Queue()$/;"	f	struct:LinkQueue
+graph_init	deploy.h	/^    graph_init() {}$/;"	f	struct:graph_init
+graph_init	deploy.h	/^struct graph_init$/;"	s
+hanMing	deploy.cpp	/^bool hanMing(ga_vector population, ga_struct citizen)$/;"	f
+hanMingDis	deploy.cpp	/^int hanMingDis(ga_struct popu_citizen,ga_struct citizen)$/;"	f
+init	deploy.h	/^    void init(int n){$/;"	f	struct:mcmf
+init_Queue	deploy.h	/^    void init_Queue()$/;"	f	struct:LinkQueue
+init_key_serevr	deploy.cpp	/^ga_struct init_key_serevr(graph_init *clean_graph){$/;"	f
+init_key_serevr2	deploy.cpp	/^ga_struct init_key_serevr2(graph_init *clean_graph){$/;"	f
+init_key_serevr3	deploy.cpp	/^ga_struct init_key_serevr3(graph_init *clean_graph,int rate){$/;"	f
+init_population	deploy.cpp	/^bool init_population(ga_vector &population, ga_vector &buffer,graph_init *clean_graph)$/;"	f
+inq	deploy.h	/^    int inq[MAX];$/;"	m	struct:mcmf
+inspire_interface	deploy.h	/^struct inspire_interface$/;"	s
+is_Empty	deploy.h	/^    int is_Empty()$/;"	f	struct:LinkQueue
+is_first_calcu	deploy.cpp	/^int is_first_calcu = 1;$/;"	v
+item_num	deploy.h	/^    int item_num;$/;"	m	struct:LinkQueue
+link_cost	deploy.h	/^    int link_cost;				\/\/MCFS绠楀畬鐨勭珛閾捐矾涓婄殑cost$/;"	m	struct:inspire_interface
+m	deploy.h	/^    int m;$/;"	m	struct:MCFS
+m	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+main	cdn.cpp	/^int main(int argc, char *argv[])$/;"	f
+mate	deploy.cpp	/^void mate(ga_vector &population, ga_vector &buffer){$/;"	f
+mcmf	deploy.h	/^struct mcmf{$/;"	s
+mutate	deploy.cpp	/^inline void mutate(ga_struct &member){$/;"	f
+n	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+n	deploy.h	/^    int n;$/;"	m	struct:MCFS
+next	deploy.h	/^    struct QNode *next;$/;"	m	struct:QNode	typeref:struct:QNode::QNode
+node_array_begin	deploy.h	/^    NSnode *node_array_begin;$/;"	m	struct:MCFS
+node_array_end	deploy.h	/^    NSnode *node_array_end;$/;"	m	struct:MCFS
+node_max_num	deploy.h	/^    int node_max_num;$/;"	m	struct:MCFS
+operator =	deploy.h	/^    void operator=(graph_init *a)$/;"	f	struct:graph_init
+operator T	deploy.h	/^    operator T()$/;"	f	class:Get_Type_Max
+p	deploy.h	/^    int p[MAX];$/;"	m	struct:mcmf
+potential	deploy.h	/^    int potential;$/;"	m	struct:NSnode
+pred	deploy.h	/^    NSnode *pred;$/;"	m	struct:NSnode
+print_Queue	deploy.h	/^    void print_Queue()$/;"	f	struct:LinkQueue
+print_best	deploy.cpp	/^inline void print_best(ga_vector &gav)$/;"	f
+print_ga	deploy.h	/^    void print_ga(){$/;"	f	struct:ga_struct
+print_time	io.cpp	/^void print_time(const char *head)$/;"	f
+qiwei_server_used	deploy.h	/^    void qiwei_server_used(inspire_interface* inter)$/;"	f	struct:MCFS
+qiwei_solve	deploy.h	/^    void qiwei_solve(inspire_interface* inter)$/;"	f	struct:MCFS
+read_file	io.cpp	/^int read_file(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
+rear	deploy.h	/^    QueuePtr rear;$/;"	m	struct:LinkQueue
+release_buff	io.cpp	/^void release_buff(char ** const buff, const int valid_item_num)$/;"	f
+s	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+server	deploy.h	/^	string  server;			\/\/ 1:biuld server here ;  0:not$/;"	m	struct:ga_struct
+serverNum	deploy.h	/^	int serverNum;$/;"	m	struct:ga_struct
+server_balance	deploy.h	/^    vector<int> server_balance;	\/\/鐢ㄥ埌鐨剆erver涓婄殑balance$/;"	m	struct:inspire_interface
+server_cost	deploy.h	/^    int server_cost;$/;"	m	struct:graph_init
+server_cost	deploy.h	/^    int server_cost;$/;"	m	struct:mcmf
+server_id	deploy.h	/^	vector<int> server_id;$/;"	m	struct:ga_struct
+server_list	deploy.h	/^    vector<int> server_list;	\/\/鍚彂寮忕粰瀹氱殑server list$/;"	m	struct:inspire_interface
+server_used	deploy.h	/^    vector<int> server_used;	\/\/鐢ㄥ埌鐨剆erver$/;"	m	struct:inspire_interface
+sort_by_fitness	deploy.cpp	/^inline void sort_by_fitness(ga_vector &population){$/;"	f
+status	deploy.h	/^    int status;$/;"	m	struct:MCFS
+sum	deploy.h	/^    long long sum;$/;"	m	struct:LinkQueue
+swap	deploy.cpp	/^inline void swap(ga_vector *&population, ga_vector *&buffer){$/;"	f
+t	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+test	deploy.h	/^    void test(){$/;"	f	struct:mcmf
+thread	deploy.h	/^    NSnode *thread;$/;"	m	struct:NSnode
+to	deploy.h	/^    NSnode *to;$/;"	m	struct:NSarc
+to	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+topo_init	deploy.cpp	/^void topo_init(char * topo[MAX_EDGE_NUM],int line_num,MCMF * cdn,MCFS * qiwei){$/;"	f
+write_file	io.cpp	/^INLINE void write_file(const bool cover, const char * const buff, const char * const filename)$/;"	f
+write_result	io.cpp	/^void write_result(const char * const buff,const char * const filename)$/;"	f

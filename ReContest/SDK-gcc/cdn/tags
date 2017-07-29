@@ -1,0 +1,404 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS_RC	sim.h	/^    int ABS_RC;$/;"	m	struct:candidiate
+ADD_UP_RATE	deploy.cpp	18;"	d	file:
+ARC_NULL	sim.h	23;"	d
+AT	deploy.h	14;"	d
+AddEdge	deploy.h	/^    void AddEdge(int from,int to,int cap,int cost){$/;"	f	struct:mcmf
+AddEdge	fusai.h	/^    void AddEdge(int from,int to,int cap,int cost)$/;"	f	struct:info_mesh
+AddSuperS	deploy.h	/^    void AddSuperS(int to,int cap){$/;"	f	struct:mcmf
+AddSuperS	fusai.h	/^    void AddSuperS(int to)$/;"	f	struct:info_mesh
+AddSuperT	deploy.h	/^    void AddSuperT(int from,int cap){$/;"	f	struct:mcmf
+AddSuperT	fusai.h	/^    void AddSuperT(int from,int cap)$/;"	f	struct:info_mesh
+BACK_Solver	deploy.cpp	/^precision BACK_Solver(graph_init* clean_graph, vector<int> &server,Info *fusai)$/;"	f
+BACK_Solver_Out	deploy.cpp	/^precision BACK_Solver_Out(graph_init* clean_graph, vector<int> &server,Info *fusai,MCMF *out)$/;"	f
+BellmanFord	deploy.cpp	/^bool BellmanFord(int s,int t,int &flow,int &cost,MCMF *cdn)$/;"	f
+Better_solution	deploy.cpp	/^void Better_solution(MCFS* cdn,vector<server_in> &test_server,vector<int> &server)$/;"	f
+Bukejie	sim.h	/^    Bukejie$/;"	e	enum:NS_STATUS
+CAP	sim.h	/^    vector<int>  CAP;$/;"	m	struct:graph_init
+COST	sim.h	/^    vector<int>  COST;$/;"	m	struct:graph_init
+C_node	sim.h	/^    C_node=1,$/;"	e	enum:STC_TYPE
+Candidate_num_big	sim.h	28;"	d
+Candidate_num_little	sim.h	26;"	d
+Candidate_num_medium	sim.h	27;"	d
+Candy_Group_Num	sim.h	/^    int Candy_Group_Num;$/;"	m	struct:MCFS
+Candy_Size	sim.h	/^    int Candy_Size;\/\/外层的大小$/;"	m	struct:MCFS
+Candy_pointer	sim.h	/^    int Candy_pointer;\/\/指明当前使用的候选者列表$/;"	m	struct:MCFS
+Client	fusai.h	/^} Client;$/;"	t	typeref:struct:client
+ClientInfo	fusai.h	/^    vector<Client> ClientInfo;$/;"	m	struct:info_mesh
+ClientLevel	fusai.h	/^} ClientLevel;$/;"	t	typeref:struct:client_level
+CompTrace	deploy.cpp	/^void CompTrace(MCMF *cdn,char *trace)   \/\/ for the output of trace$/;"	f
+Deficit	sim.h	/^    vector<int>  Deficit;  \/\/node的收支$/;"	m	struct:graph_init
+E	deploy.h	11;"	d
+Edge	fusai.h	/^} Edge;$/;"	t	typeref:struct:edge
+EdgeCnt	fusai.h	/^    vector<int> EdgeCnt[MAX_NODE_NUM];$/;"	m	struct:info_mesh
+EdgeInfo	fusai.h	/^    vector<Edge> EdgeInfo;$/;"	m	struct:info_mesh
+Fast_ReadData	deploy.cpp	/^void Fast_ReadData(char * topo[MAX_EDGE_NUM],int line_num,graph_init *graph)$/;"	f
+Father	sim.cpp	/^int MCFS::Father(int node_num,int arc_num) \/\/������(�����ߵ������ô�죿������)$/;"	f	class:MCFS
+Feasible_judge	deploy.cpp	/^bool Feasible_judge(graph_init* clean_graph,vector<int> server_id)$/;"	f
+FinalMincost	deploy.cpp	/^int FinalMincost(int s,int t,MCMF *cdn,char *output)$/;"	f
+FlowCheck	deploy.h	/^    bool FlowCheck(int flow){$/;"	f	struct:mcmf
+From	sim.h	/^    vector<int> From;    \/\/起始点$/;"	m	struct:graph_init
+G	deploy.h	/^    vector<int> G[MAX_NODE_NUM];$/;"	m	struct:mcmf
+GA_ELITRATE	deploy.h	19;"	d
+GA_MAXITER	deploy.h	23;"	d
+GA_MUTATION	deploy.h	21;"	d
+GA_MUTATIONRATE	deploy.h	20;"	d
+GA_POPSIZE	deploy.h	22;"	d
+GA_TARSIZE	deploy.cpp	/^int GA_TARSIZE = 0;$/;"	v
+G_arc	sim.h	/^    vector<arc> G_arc;$/;"	m	struct:MCFS
+G_m	sim.h	/^    int G_m;$/;"	m	struct:graph_init
+G_n	sim.h	/^    int G_n;$/;"	m	struct:graph_init
+G_node	sim.h	/^    vector<node> G_node;$/;"	m	struct:MCFS
+Ga_For_MCF	deploy.cpp	/^vector<QIFA> Ga_For_MCF(graph_init *clean_graph,Info *fusai,vector<QIFA> &key_server,int &key_cost){$/;"	f
+GetTop	deploy.h	/^    QElemType GetTop()$/;"	f	struct:LinkQueue
+Get_Type_Max	sim.h	/^    Get_Type_Max() {}$/;"	f	class:Get_Type_Max
+Get_Type_Max	sim.h	/^class Get_Type_Max$/;"	c
+HanMingDis	deploy.h	17;"	d
+Hot_list_big	sim.h	31;"	d
+Hot_list_little	sim.h	29;"	d
+Hot_list_medium	sim.h	30;"	d
+Hotlist_Size	sim.h	/^    int Hotlist_Size;\/\/内层的大小$/;"	m	struct:MCFS
+INF	fusai.h	17;"	d
+INIT_RATE	fusai.h	16;"	d
+INLINE	io.cpp	13;"	d	file:
+Info	fusai.h	/^} Info;$/;"	t	typeref:struct:info_mesh
+L	deploy.h	13;"	d
+L_ARC	sim.h	/^    L_ARC=1,$/;"	e	enum:TLU_TYPE
+L_INIT	deploy.h	12;"	d
+LinkQueue	deploy.h	/^typedef struct LinkQueue$/;"	s
+LinkQueue	deploy.h	/^}LinkQueue;$/;"	t	typeref:struct:LinkQueue
+MAGIC_LEVEL	deploy.cpp	12;"	d	file:
+MAX_CAP	sim.h	21;"	d
+MAX_COST	sim.h	20;"	d
+MAX_EDGE_NUM	lib/lib_io.h	4;"	d
+MAX_LEVEL	fusai.h	15;"	d
+MAX_LINE_LEN	io.cpp	11;"	d	file:
+MAX_NODE_NUM	lib/lib_io.h	5;"	d
+MCFS	sim.h	/^    MCFS() {}$/;"	f	struct:MCFS
+MCFS	sim.h	/^struct MCFS$/;"	s
+MCFS_init	fusai.h	/^    void MCFS_init(MCFS *cdn)$/;"	f	struct:info_mesh
+MCMF	deploy.h	/^typedef struct mcmf MCMF;$/;"	t	typeref:struct:mcmf
+NODE_NULL	sim.h	22;"	d
+NO_SOLUTION	sim.h	/^    NO_SOLUTION=-1,$/;"	e	enum:NS_STATUS
+NS_STATUS	sim.h	/^enum NS_STATUS$/;"	g
+NetId	deploy.h	/^    int NetId;$/;"	m	struct:QElemType
+Node	fusai.h	/^} Node;$/;"	t	typeref:struct:m_node
+NodeInfo	deploy.h	/^    vector<Node> NodeInfo;$/;"	m	struct:mcmf
+NodeInfo	fusai.h	/^    vector<Node> NodeInfo;$/;"	m	struct:info_mesh
+NodeLevel	fusai.h	/^} NodeLevel;$/;"	t	typeref:struct:node_level
+PRINT	io.cpp	15;"	d	file:
+PRINT	io.cpp	17;"	d	file:
+PopInitRate	deploy.h	18;"	d
+QElemType	deploy.h	/^typedef struct QElemType$/;"	s
+QElemType	deploy.h	/^}QElemType;$/;"	t	typeref:struct:QElemType
+QIFA	fusai.h	/^} QIFA;$/;"	t	typeref:struct:qifa
+QIWEI_FIND	sim.h	/^    QIWEI_FIND,$/;"	e	enum:NS_STATUS
+QNode	deploy.h	/^typedef struct QNode$/;"	s
+QNode	deploy.h	/^}QNode, *QueuePtr;$/;"	t	typeref:struct:QNode
+Qswap	deploy.h	/^    void Qswap(LinkQueue &P){$/;"	f	struct:LinkQueue
+QueuePtr	deploy.h	/^}QNode, *QueuePtr;$/;"	t	typeref:struct:QNode
+Reduce_Cost	sim.cpp	/^int MCFS::Reduce_Cost(int arc_num)$/;"	f	class:MCFS
+SIMPLEX_H_INCLUDED	sim.h	2;"	d
+STC_TYPE	sim.h	/^enum STC_TYPE$/;"	g
+S_node	sim.h	/^    S_node=0,$/;"	e	enum:STC_TYPE
+SaveCustomer	deploy.h	/^    void SaveCustomer(int customer,int netnode){$/;"	f	struct:mcmf
+Server	fusai.h	/^} Server;$/;"	t	typeref:struct:m_server
+ServerCheck	deploy.h	/^    vector<int> ServerCheck(){$/;"	f	struct:mcmf
+ServerInfo	deploy.h	/^    vector<Server> ServerInfo;$/;"	m	struct:mcmf
+ServerInfo	fusai.h	/^    vector<Server> ServerInfo;$/;"	m	struct:info_mesh
+ServerNode	fusai.h	/^} ServerNode;$/;"	t	typeref:struct:m_server_node
+ServerNodeService	fusai.h	/^} ServerNodeService;$/;"	t	typeref:struct:server_node_service
+SetParent	deploy.cpp	/^int SetParent(ga_vector &population){$/;"	f
+T	deploy.cpp	/^double T =  1;       \/\/ 初始温度$/;"	v
+TIME_LIMIT	deploy.cpp	14;"	d	file:
+TIME_LIMIT_TUIHUO	deploy.cpp	15;"	d	file:
+TIME_LIMIT_YICHUAN	deploy.cpp	16;"	d	file:
+TLU	sim.h	/^    TLU_TYPE TLU;\/\/判断此边是T L U$/;"	m	struct:arc
+TLU_TYPE	sim.h	/^enum TLU_TYPE$/;"	g
+TO	sim.h	/^    vector<int> TO;    \/\/ 终止点$/;"	m	struct:graph_init
+TUIHUO	deploy.cpp	10;"	d	file:
+T_ARC	sim.h	/^    T_ARC=0,$/;"	e	enum:TLU_TYPE
+T_none_zero_arc	sim.h	/^    vector<int> T_none_zero_arc;$/;"	m	struct:MCFS
+Tmp_Candy_Size	sim.h	/^    int Tmp_Candy_Size;$/;"	m	struct:MCFS
+Trans_node	sim.h	/^    Trans_node$/;"	e	enum:STC_TYPE
+U_ARC	sim.h	/^    U_ARC$/;"	e	enum:TLU_TYPE
+U_none_zero_arc	sim.h	/^    vector<int> U_none_zero_arc;$/;"	m	struct:MCFS
+UpdateNodeRate	fusai.h	/^    void UpdateNodeRate()   \/\/if big server,+0.1$/;"	f	struct:info_mesh
+YICHUAN_INIT	deploy.cpp	11;"	d	file:
+ZLSolver	deploy.cpp	/^vector<int> ZLSolver(graph_init* clean_graph,Info * fusai,vector<int> &server_id,int &cost)$/;"	f
+__LIB_IO_H__	lib/lib_io.h	2;"	d
+__LIB_TIME_H__	lib/lib_time.h	2;"	d
+__ROUTE_H__	deploy.h	2;"	d
+__fusai_h__	fusai.h	2;"	d
+a	deploy.h	/^    int a[MAX_NODE_NUM];$/;"	m	struct:mcmf
+add_potential	sim.cpp	/^void MCFS::add_potential(int root,int delta)$/;"	f	class:MCFS
+additional_init	fusai.h	/^    void additional_init()$/;"	f	struct:info_mesh
+all_node_total_cost	deploy.h	/^    int all_node_total_cost=0;$/;"	m	struct:precision
+arc	sim.h	/^struct arc$/;"	s
+arc_max	sim.h	/^    int arc_max;\/\/初始图的边的数目$/;"	m	struct:MCFS
+arc_num	sim.h	/^    int arc_num;$/;"	m	struct:candidiate
+arc_total	sim.h	/^    int arc_total;\/\/总共的边的数目=初始边的数目+点的数目$/;"	m	struct:MCFS
+aver_setup_cost	fusai.h	/^    int aver_setup_cost;$/;"	m	struct:info_mesh
+back_real_result	sim.h	/^	int back_real_result;$/;"	m	struct:MCFS
+bad_node	sim.h	/^struct bad_node$/;"	s
+bad_node_show	sim.h	/^    void bad_node_show()$/;"	f	struct:MCFS
+balance	sim.h	/^    int balance;\/\/代表这个点的收支状况$/;"	m	struct:node
+branch_band	fusai.h	/^    void branch_band()$/;"	f	struct:info_mesh
+calc_fitness	deploy.cpp	/^inline void calc_fitness(graph_init *clean_graph,ga_vector &population,Info *fusai)$/;"	f
+candidiate	sim.h	/^struct candidiate \/\/the candidate list$/;"	s
+candy	sim.h	/^    vector<candidiate> candy;$/;"	m	struct:MCFS
+candy_init	sim.h	/^    void candy_init(void)$/;"	f	struct:MCFS
+candy_malloc	sim.h	/^    void candy_malloc(void)$/;"	f	struct:MCFS
+candy_show	sim.h	/^    void candy_show()$/;"	f	struct:MCFS
+candy_sort	sim.h	/^    void candy_sort(int can_min,int can_max)$/;"	f	struct:MCFS
+cap	fusai.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+cap	sim.h	/^    int cap;$/;"	m	struct:server_type
+cap	sim.h	/^    int cap;\/\/边的容量$/;"	m	struct:arc
+cdn_client	fusai.h	/^    vector<client_node> cdn_client;$/;"	m	struct:info_mesh
+cdn_lack_node	fusai.h	/^    vector<bad_node> cdn_lack_node;$/;"	m	struct:info_mesh
+cdn_server	fusai.h	/^    vector<server_node> cdn_server;$/;"	m	struct:info_mesh
+choose_level	deploy.cpp	/^int choose_level(int &flag,int &loop_cnt,int min_cost,Info* fusai,vector<QIFA> &server)$/;"	f
+choose_server	deploy.h	/^    int choose_server(int supply){$/;"	f	struct:mcmf
+choose_server	fusai.h	/^    int choose_server(int supply)$/;"	f	struct:info_mesh
+clear	deploy.h	/^    void clear()$/;"	f	struct:LinkQueue
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:ga_struct
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:mcmf
+client	fusai.h	/^typedef struct client$/;"	s
+client	sim.h	/^    vector<client_node> client;$/;"	m	struct:MCFS
+client_demand	sim.h	/^    vector<int> client_demand;$/;"	m	struct:graph_init
+client_id	fusai.h	/^    int client_id;$/;"	m	struct:client
+client_id	fusai.h	/^    int client_id;$/;"	m	struct:server_node_service
+client_level	fusai.h	/^    ClientLevel * client_level;$/;"	m	struct:client
+client_level	fusai.h	/^typedef struct client_level$/;"	s
+client_need	fusai.h	/^    int client_need;$/;"	m	struct:client
+client_node	sim.h	/^struct client_node$/;"	s
+client_num	fusai.h	/^    int client_num;$/;"	m	struct:info_mesh
+client_num	sim.h	/^    vector<int> client_num;$/;"	m	struct:graph_init
+compute_df2	deploy.cpp	/^int compute_df2(Info * fusai,int link_cost)$/;"	f
+compute_setup_cost	deploy.h	/^    int compute_setup_cost(){$/;"	f	struct:mcmf
+compute_setup_cost	fusai.h	/^    int compute_setup_cost(vector<server_node> server)$/;"	f	struct:info_mesh
+confirm_key_server	deploy.cpp	/^int confirm_key_server(graph_init *clean_graph,Info *fusai,vector<QIFA> &key_server,int level)$/;"	f
+cost	deploy.h	/^    int cost;			$/;"	m	struct:inspire_interface
+cost	deploy.h	/^    int cost[4];$/;"	m	struct:ga_pop_init
+cost	fusai.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+cost	sim.h	/^    int cost;$/;"	m	struct:server_type
+cost	sim.h	/^    int cost;\/\/边上的cost$/;"	m	struct:arc
+countl	deploy.cpp	/^double countl=0;$/;"	v
+cus	deploy.h	/^    int * cus;$/;"	m	struct:mcmf
+cus	fusai.h	/^    int *cus;$/;"	m	struct:info_mesh
+cut_and_update_subtree	sim.cpp	/^int MCFS::cut_and_update_subtree(int root,int depth_delta)$/;"	f	class:MCFS
+d	deploy.h	/^    int d[MAX_NODE_NUM];$/;"	m	struct:mcmf
+data	deploy.h	/^    QElemType data;$/;"	m	struct:QNode
+de_Queue	deploy.h	/^    void de_Queue()$/;"	f	struct:LinkQueue
+de_Queue_where	deploy.h	/^    void de_Queue_where(int aver,QElemType &out)$/;"	f	struct:LinkQueue
+demand	sim.h	/^    int demand;$/;"	m	struct:client_node
+deploy_server	deploy.cpp	/^void deploy_server(char * topo[MAX_EDGE_NUM], int line_num,char * filename)$/;"	f
+depth	sim.h	/^    int depth;$/;"	m	struct:node
+determine_inital_feasible_tree	sim.cpp	/^void MCFS::determine_inital_feasible_tree(void)$/;"	f	class:MCFS
+dist	deploy.h	/^    int dist;$/;"	m	struct:QElemType
+edge	fusai.h	/^typedef struct edge$/;"	s
+edge_check	deploy.h	/^    void edge_check(Edge * e){$/;"	f	struct:mcmf
+edge_num	fusai.h	/^    int edge_num;$/;"	m	struct:info_mesh
+edges	deploy.h	/^    vector<Edge> edges;$/;"	m	struct:mcmf
+elitism	deploy.cpp	/^void elitism(ga_vector &population, ga_vector &buffer, int esize ){$/;"	f
+en_Queue_Rear	deploy.h	/^    void en_Queue_Rear(QElemType e)$/;"	f	struct:LinkQueue
+en_Queue_Top	deploy.h	/^    void en_Queue_Top(QElemType e)$/;"	f	struct:LinkQueue
+enter_simplex	sim.cpp	/^void MCFS::enter_simplex(int enter_arc)$/;"	f	class:MCFS
+fake_back_total_cost	deploy.h	/^    int fake_back_total_cost=0;$/;"	m	struct:precision
+fast_init_MCFS_graph	sim.cpp	/^void MCFS::fast_init_MCFS_graph(const graph_init* raw_graph,vector<server_in> server)$/;"	f	class:MCFS
+fast_use_sim	deploy.cpp	/^bool fast_use_sim(graph_init* clean_graph,Info * fusai,MCFS * cdn,vector<int> server_id)$/;"	f
+find_closure_server	fusai.h	/^    int find_closure_server(vector<int> tmp_server,int level)   \/\/ within the range of level,find the minest closure,return final server_id$/;"	f	struct:info_mesh
+find_closure_server_qifa	fusai.h	/^    QIFA find_closure_server_qifa(vector<QIFA> tmp_server,int level)   \/\/ within the range of level,find the minest closure,return final server_id$/;"	f	struct:info_mesh
+fitness	deploy.h	/^	int fitness;					\/\/ its fitness$/;"	m	struct:ga_struct
+fitness_sort	deploy.cpp	/^inline bool fitness_sort(ga_struct x, ga_struct y) {$/;"	f
+flow	fusai.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+flow	sim.h	/^    int flow;$/;"	m	struct:arc
+flow_out	fusai.h	/^    int flow_out;$/;"	m	struct:m_server_node
+from	fusai.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+from	sim.h	/^    int from;$/;"	m	struct:arc
+front	deploy.h	/^    QueuePtr front;$/;"	m	struct:LinkQueue
+ga_pop_init	deploy.h	/^typedef struct ga_pop_init{$/;"	s
+ga_pop_init	deploy.h	/^}ga_pop_init;$/;"	t	typeref:struct:ga_pop_init
+ga_struct	deploy.h	/^struct ga_struct$/;"	s
+ga_vector	deploy.h	/^typedef vector<ga_struct> ga_vector;\/\/ for brevity$/;"	t
+get_result	sim.h	/^    void get_result()$/;"	f	struct:MCFS
+getlength_Queue	deploy.h	/^    int getlength_Queue()$/;"	f	struct:LinkQueue
+graph_init	sim.h	/^    graph_init() {}$/;"	f	struct:graph_init
+graph_init	sim.h	/^struct graph_init$/;"	s
+hanMing	deploy.cpp	/^bool hanMing(ga_vector population, ga_struct citizen)$/;"	f
+hanMingDis	deploy.cpp	/^int hanMingDis(ga_struct popu_citizen,ga_struct citizen)$/;"	f
+info_mesh	fusai.h	/^typedef struct info_mesh$/;"	s
+init	deploy.h	/^    void init(int n){$/;"	f	struct:mcmf
+init	fusai.h	/^    void init(char * topo[MAX_EDGE_NUM],int line_num)$/;"	f	struct:info_mesh
+init_MCFS_graph	sim.cpp	/^void MCFS::init_MCFS_graph(const graph_init* raw_graph,vector<server_in> server)$/;"	f	class:MCFS
+init_Queue	deploy.h	/^    void init_Queue()$/;"	f	struct:LinkQueue
+init_demand	sim.h	/^    int init_demand;$/;"	m	struct:node
+init_from_tuihuo	deploy.cpp	/^ga_struct init_from_tuihuo(graph_init *clean_graph,Info *fusai,vector<QIFA> &key_server,int &cost){$/;"	f
+init_key_serevr	deploy.cpp	/^ga_struct init_key_serevr(graph_init *clean_graph,Info *fusai,int level){$/;"	f
+init_population	deploy.cpp	/^bool init_population(graph_init *clean_graph,ga_vector &population, ga_vector &buffer,Info *fusai,vector<QIFA> min_server,int min_cost)$/;"	f
+inline_tuihuo	deploy.cpp	/^int inline_tuihuo(char * topo[MAX_EDGE_NUM], int line_num,vector<QIFA> &inline_server)$/;"	f
+inq	deploy.h	/^    int inq[MAX_NODE_NUM];$/;"	m	struct:mcmf
+inspire_interface	deploy.h	/^struct inspire_interface$/;"	s
+interface_transfer	fusai.h	/^    vector<server_in> interface_transfer(vector<server_node> server)$/;"	f	struct:info_mesh
+is_Empty	deploy.h	/^    int is_Empty()$/;"	f	struct:LinkQueue
+is_first_calcu	deploy.cpp	/^int is_first_calcu = 1;$/;"	v
+item_num	deploy.h	/^    int item_num;$/;"	m	struct:LinkQueue
+judge_big_level	sim.h	/^    bool judge_big_level(int supply,server_type &tmp)$/;"	f	struct:MCFS
+judge_equal_level	sim.h	/^    bool judge_equal_level(int supply,server_type &tmp)$/;"	f	struct:MCFS
+key_edge_init	deploy.h	/^    void key_edge_init(MCFS *cdn){$/;"	f	struct:mcmf
+lack	sim.h	/^    int lack;$/;"	m	struct:bad_node
+lack	sim.h	/^    int lack;$/;"	m	struct:client_node
+lack_flow	sim.h	/^    int lack_flow=0;$/;"	m	struct:node
+lack_node	sim.h	/^    vector<bad_node> lack_node;$/;"	m	struct:MCFS
+level	sim.h	/^    int level;$/;"	m	struct:server_type
+level_for_each_client	fusai.h	/^    vector<int> level_for_each_client;              \/\/based on node,stored info for each client$/;"	m	struct:node_level
+level_for_which_client	fusai.h	/^    vector<int> level_for_which_client[MAX_LEVEL];  \/\/based on client,stored info for each level$/;"	m	struct:node_level
+level_init	fusai.h	/^    void level_init()$/;"	f	struct:info_mesh
+level_up	fusai.h	/^    void level_up(int up_num,int up_level,vector<QIFA> &server)$/;"	f	struct:info_mesh
+link_cost	deploy.h	/^    int link_cost=0;$/;"	m	struct:precision
+link_result	fusai.h	/^    int link_result;$/;"	m	struct:info_mesh
+link_result	sim.h	/^    int link_result;$/;"	m	struct:MCFS
+loop_test	deploy.cpp	/^void loop_test(vector<QIFA> server){$/;"	f
+m	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+m_node	fusai.h	/^typedef struct m_node$/;"	s
+m_server	fusai.h	/^typedef struct m_server$/;"	s
+m_server_node	fusai.h	/^typedef struct m_server_node$/;"	s
+main	cdn.cpp	/^int main(int argc, char *argv[])$/;"	f
+mate	deploy.cpp	/^void mate(ga_vector &population, ga_vector &buffer){$/;"	f
+max_server_cap	fusai.h	/^    int max_server_cap;$/;"	m	struct:info_mesh
+max_setup_cost	fusai.h	/^    int max_setup_cost;$/;"	m	struct:info_mesh
+mcmf	deploy.h	/^struct mcmf{$/;"	s
+min_satisfy_num	fusai.h	/^    int min_satisfy_num=node_num;$/;"	m	struct:info_mesh
+min_setup_cost	fusai.h	/^    int min_setup_cost;$/;"	m	struct:info_mesh
+modify_finded_server	fusai.h	/^    void modify_finded_server(vector<server_node>server_used,vector<int> &tmp_server,int de_num)$/;"	f	struct:info_mesh
+modify_server	deploy.cpp	/^void modify_server(int flag,vector<QIFA> &server,Info *fusai,queue<int> &q,int cost)$/;"	f
+modify_server	fusai.h	/^    void modify_server(vector<int> &tmp_server,int level)   \/\/ within the range of level,find the minest closure,return final server_id$/;"	f	struct:info_mesh
+mutate	deploy.cpp	/^inline void mutate(ga_struct &member){$/;"	f
+n	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+next	deploy.h	/^    struct QNode *next;$/;"	m	struct:QNode	typeref:struct:QNode::QNode
+node	sim.h	/^struct node$/;"	s
+node_degree	fusai.h	/^    int node_degree;     \/\/in_degree equals out_degree$/;"	m	struct:m_node
+node_id	fusai.h	/^    int node_id;$/;"	m	struct:client
+node_id	fusai.h	/^    int node_id;$/;"	m	struct:m_node
+node_level	fusai.h	/^    NodeLevel * node_level;$/;"	m	struct:m_node
+node_level	fusai.h	/^typedef struct node_level$/;"	s
+node_max	sim.h	/^    int node_max;\/\/初始图的点的数目$/;"	m	struct:MCFS
+node_num	fusai.h	/^    int node_num;$/;"	m	struct:info_mesh
+node_num	sim.h	/^    int node_num;$/;"	m	struct:bad_node
+node_num	sim.h	/^    int node_num;$/;"	m	struct:client_node
+node_num	sim.h	/^    int node_num;$/;"	m	struct:node
+node_num	sim.h	/^    int node_num;$/;"	m	struct:server_node
+node_rate	fusai.h	/^    double node_rate;    \/\/define the setup order$/;"	m	struct:m_node
+node_server_cost	fusai.h	/^    int node_server_cost;$/;"	m	struct:m_node
+node_total	sim.h	/^    int node_total;\/\/总共的点的数目=初始点的数目+1=超级点的位置+1$/;"	m	struct:MCFS
+none_zero_total_cost	deploy.h	/^    int none_zero_total_cost=0;$/;"	m	struct:precision
+operator <	sim.h	/^    bool operator<(const struct server_node b) const$/;"	f	struct:server_node
+operator =	sim.h	/^    void operator=(graph_init *a)$/;"	f	struct:graph_init
+operator T	sim.h	/^    operator T()$/;"	f	class:Get_Type_Max
+outline_tuihuo	deploy.cpp	/^void outline_tuihuo(graph_init *clean_graph,Info *fusai,vector<QIFA> &min_server,int &min_cost){$/;"	f
+p	deploy.h	/^    int p[MAX_NODE_NUM];$/;"	m	struct:mcmf
+paste_subtree	sim.cpp	/^void MCFS::paste_subtree(int root,int last_node,int previous_node)$/;"	f	class:MCFS
+path_vector_index	sim.h	/^    int path_vector_index;\/\/代表在path vector中的位$/;"	m	struct:node
+pop_init	deploy.h	/^    ga_struct pop_init[4];$/;"	m	struct:ga_pop_init
+potential	sim.h	/^    int potential;$/;"	m	struct:node
+pre_server_num	fusai.h	/^    int pre_server_num;$/;"	m	struct:info_mesh
+precision	deploy.h	/^struct precision$/;"	s
+pred	sim.h	/^    int pred;$/;"	m	struct:node
+print_Queue	deploy.h	/^    void print_Queue()$/;"	f	struct:LinkQueue
+print_best	deploy.cpp	/^inline void print_best(ga_vector &gav)$/;"	f
+print_ga	deploy.h	/^    void print_ga(){$/;"	f	struct:ga_struct
+print_time	io.cpp	/^void print_time(const char *head)$/;"	f
+qifa	fusai.h	/^typedef struct qifa$/;"	s
+qifa_sim	deploy.cpp	/^bool qifa_sim(graph_init* clean_graph,Info * fusai,vector<QIFA> &server_qifa)$/;"	f
+qifa_sim_out	deploy.cpp	/^bool qifa_sim_out(graph_init* clean_graph,Info * fusai,vector<QIFA> server_qifa,MCFS *cdn)$/;"	f
+read_file	io.cpp	/^int read_file(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
+real_edge_num	fusai.h	/^    int real_edge_num;$/;"	m	struct:info_mesh
+real_node_num	fusai.h	/^    int real_node_num;$/;"	m	struct:info_mesh
+rear	deploy.h	/^    QueuePtr rear;$/;"	m	struct:LinkQueue
+release_buff	io.cpp	/^void release_buff(char ** const buff, const int valid_item_num)$/;"	f
+s	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+search_by_level	fusai.h	/^    vector<int> search_by_level[MAX_LEVEL];  \/\/based on client,stored info for each level$/;"	m	struct:client_level
+search_for_key_server	fusai.h	/^    vector<int> search_for_key_server(int level)$/;"	f	struct:info_mesh
+select_enter_arc	sim.cpp	/^int MCFS::select_enter_arc(void)$/;"	f	class:MCFS
+serve_flow	fusai.h	/^    int serve_flow;$/;"	m	struct:server_node_service
+server	deploy.h	/^	string  server;			\/\/ 1:biuld server here ;  0:not$/;"	m	struct:ga_struct
+server	deploy.h	/^    vector<server_node> server;$/;"	m	struct:mcmf
+server	sim.h	/^    vector<server_node> server;$/;"	m	struct:MCFS
+serverNum	deploy.h	/^	int serverNum;$/;"	m	struct:ga_struct
+server_cap	fusai.h	/^    int server_cap;$/;"	m	struct:m_server
+server_cap	sim.h	/^    int server_cap=0;$/;"	m	struct:node
+server_cap	sim.h	/^    int server_cap=0;$/;"	m	struct:server_in
+server_cost	fusai.h	/^    int server_cost;$/;"	m	struct:m_server
+server_cost	sim.h	/^    int server_cost;$/;"	m	struct:graph_init
+server_cost	sim.h	/^    int server_cost=0;$/;"	m	struct:node
+server_cost	sim.h	/^    int server_cost=0;$/;"	m	struct:server_in
+server_id	deploy.h	/^	vector<QIFA> server_id;$/;"	m	struct:ga_struct
+server_id	fusai.h	/^    int server_id;$/;"	m	struct:qifa
+server_in	sim.h	/^    server_in()$/;"	f	struct:server_in
+server_in	sim.h	/^    server_in(int a,int b,int c)$/;"	f	struct:server_in
+server_in	sim.h	/^struct server_in$/;"	s
+server_level	sim.h	/^    int server_level=-1;\/\/默认不建站，值为-1$/;"	m	struct:node
+server_level	sim.h	/^    vector<server_type> server_level;$/;"	m	struct:MCFS
+server_level	sim.h	/^    vector<server_type> server_level;$/;"	m	struct:graph_init
+server_level_show	sim.h	/^    void server_level_show()$/;"	f	struct:MCFS
+server_list	deploy.h	/^    vector<int> server_list;	$/;"	m	struct:inspire_interface
+server_node	sim.h	/^struct server_node$/;"	s
+server_node_id	sim.h	/^    int server_node_id=0;$/;"	m	struct:server_in
+server_node_service	fusai.h	/^typedef struct server_node_service$/;"	s
+server_show	sim.h	/^    void server_show()$/;"	f	struct:MCFS
+server_type	fusai.h	/^    int server_type;$/;"	m	struct:m_server
+server_type	fusai.h	/^    int server_type;$/;"	m	struct:qifa
+server_type	sim.h	/^struct server_type$/;"	s
+server_type_num	deploy.h	/^    int server_type_num;$/;"	m	struct:mcmf
+server_type_num	fusai.h	/^    int server_type_num;$/;"	m	struct:info_mesh
+server_used	deploy.h	/^    vector<int> server_used;$/;"	m	struct:inspire_interface
+service	fusai.h	/^    ServerNodeService * service;$/;"	m	struct:m_server_node
+set_cost	sim.h	/^    int set_cost=0;$/;"	m	struct:node
+set_cost	sim.h	/^    vector<int>	set_cost;\/\/node的set值$/;"	m	struct:graph_init
+set_cost_show	sim.h	/^    void set_cost_show()$/;"	f	struct:MCFS
+show	sim.h	/^    void show()$/;"	f	struct:MCFS
+show	sim.h	/^    void show()$/;"	f	struct:arc
+show	sim.h	/^    void show()$/;"	f	struct:candidiate
+show	sim.h	/^    void show()$/;"	f	struct:graph_init
+show	sim.h	/^    void show()$/;"	f	struct:node
+show_node_num	sim.h	/^    void show_node_num()$/;"	f	struct:node
+show_set	sim.h	/^    void show_set()$/;"	f	struct:node
+show_set_cost	sim.h	/^    void show_set_cost()$/;"	f	struct:graph_init
+simplex	sim.cpp	/^void MCFS::simplex(void)$/;"	f	class:MCFS
+sort_by_fitness	deploy.cpp	/^inline void sort_by_fitness(ga_vector &population){$/;"	f
+status	deploy.h	/^	NS_STATUS status=Bukejie;$/;"	m	struct:precision
+status	fusai.h	/^    NS_STATUS status;$/;"	m	struct:info_mesh
+status	sim.h	/^    NS_STATUS status;$/;"	m	struct:MCFS
+sum	deploy.h	/^    long long sum;$/;"	m	struct:LinkQueue
+sum_client_flow	fusai.h	/^    int sum_client_flow;$/;"	m	struct:info_mesh
+super_arc	sim.h	/^    int super_arc;\/\/超级边的起始位置$/;"	m	struct:MCFS
+super_in_arc_num	sim.h	/^    int super_in_arc_num;\/\/代表超级点到这个点的边的编号$/;"	m	struct:node
+super_node	sim.h	/^    int super_node;\/\/超级节点的开始位置$/;"	m	struct:MCFS
+supply	sim.h	/^    int supply;$/;"	m	struct:server_node
+supply_flow	sim.h	/^    int supply_flow=0;$/;"	m	struct:node
+swap	deploy.cpp	/^inline void swap(ga_vector *&population, ga_vector *&buffer){$/;"	f
+t	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+test	deploy.h	/^    void test(){$/;"	f	struct:mcmf
+test	fusai.h	/^    void test()$/;"	f	struct:info_mesh
+thread	sim.h	/^    int thread;$/;"	m	struct:node
+to	fusai.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+to	sim.h	/^    int to;$/;"	m	struct:arc
+tongji_flag	deploy.cpp	/^void tongji_flag(int flag,int df2,int cnt[8])$/;"	f
+topo_init	deploy.h	/^    void topo_init(char * topo[MAX_EDGE_NUM],int line_num){$/;"	f	struct:mcmf
+topo_init	fusai.h	/^    void topo_init(char * topo[MAX_EDGE_NUM],int line_num)$/;"	f	struct:info_mesh
+total_cost	fusai.h	/^    int total_cost;$/;"	m	struct:m_server_node
+total_demand	fusai.h	/^    int total_demand;$/;"	m	struct:info_mesh
+total_demand	sim.h	/^	int total_demand=0;$/;"	m	struct:MCFS
+total_result	sim.h	/^    int total_result;$/;"	m	struct:MCFS
+tuihuo	deploy.cpp	/^int tuihuo(graph_init *clean_graph,Info * fusai,vector<int> &server,time_t begin)$/;"	f
+tuihuo2	deploy.cpp	/^int tuihuo2(graph_init *clean_graph,Info * fusai,vector<QIFA> &server,int &min_cost,time_t begin)$/;"	f
+tuihuo_test2	deploy.cpp	/^int tuihuo_test2(graph_init *clean_graph,Info * fusai,vector<QIFA> &server,int &min_cost,time_t begin)$/;"	f
+update_tree	sim.cpp	/^void MCFS::update_tree(int enter_arc,int leave_arc,int delta,bool leave_arc_reduce_flow)$/;"	f	class:MCFS
+write_file	io.cpp	/^INLINE void write_file(const bool cover, const char * const buff, const char * const filename)$/;"	f
+write_result	io.cpp	/^void write_result(const char * const buff,const char * const filename)$/;"	f
+~MCFS	sim.h	/^    ~MCFS()$/;"	f	struct:MCFS

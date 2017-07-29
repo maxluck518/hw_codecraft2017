@@ -1,0 +1,1 @@
+/home/mjw/Desktop/hw_code/hw_codecraft2017/final/SDK-gcc/build/CMakeFiles/cdn.dir

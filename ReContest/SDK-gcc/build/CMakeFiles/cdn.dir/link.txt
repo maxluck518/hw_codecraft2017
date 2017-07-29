@@ -1,0 +1,1 @@
+/usr/bin/c++    -O3 -Wall -g -pg -ggdb -std=c++11    CMakeFiles/cdn.dir/sim.cpp.o CMakeFiles/cdn.dir/deploy.cpp.o CMakeFiles/cdn.dir/cdn.cpp.o CMakeFiles/cdn.dir/io.cpp.o  -o /home/mjw/Desktop/fuhuo_tuihuo/SDK-gcc/bin/cdn -rdynamic 

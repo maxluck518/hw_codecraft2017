@@ -1,0 +1,278 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS	ns.h	/^T ABS( const T x )$/;"	f
+ARC_CAP_MAX	ns.h	19;"	d
+AT_LOWER	ns.h	/^static const char AT_LOWER =  1;  \/\/ ident for arcs in L$/;"	v
+AT_UPPER	ns.h	/^static const char AT_UPPER =  2;  \/\/ ident for arcs in U$/;"	v
+AddEdge	deploy.h	/^    void AddEdge(int from,int to,int cap,int cost){ $/;"	f	struct:mcmf
+AddPotential	ns.cpp	/^void MCFS::AddPotential( N *r, RCT delta )$/;"	f	class:MCFS
+AddSuperS	deploy.h	/^    void AddSuperS(int to){ $/;"	f	struct:mcmf
+AddSuperT	deploy.h	/^    void AddSuperT(int from,int cap){ $/;"	f	struct:mcmf
+Add_Super_Arc	ns.cpp	/^void MCFS::Add_Super_Arc(vector<int> server_list,graph_init* graph)$/;"	f	class:MCFS
+BASIC	ns.h	/^static const char BASIC    =  0;  \/\/ ident for basis arcs$/;"	v
+BellmanFord	deploy.cpp	/^bool BellmanFord(int s,int t,int &flow,int &cost,MCMF *cdn){$/;"	f
+CLOSED	ns.h	/^static const char CLOSED   = -1;  \/\/ ident for closed arcs$/;"	v
+CNumber	ns.h	/^typedef double          CNumber;        \/\/\/< type of arc flow cost$/;"	t
+CRow	ns.h	/^typedef CNumber        *CRow;           \/\/\/< vector of costs$/;"	t
+CompTrace	deploy.cpp	/^void CompTrace(MCMF *cdn,char *trace){$/;"	f
+CutAndUpdateSubtree	ns.cpp	/^N* MCFS::CutAndUpdateSubtree( N *root, int delta )$/;"	f	class:MCFS
+DELETED	ns.h	/^static const char DELETED  = -2;  \/\/ ident for deleted arcs$/;"	v
+ETZ	ns.h	/^bool ETZ( T x, const T eps )$/;"	f
+Edge	deploy.h	/^typedef struct edge Edge;$/;"	t	typeref:struct:edge
+Eps	ns.h	/^    Eps() {}$/;"	f	class:Eps
+Eps	ns.h	/^class Eps$/;"	c
+EpsCst	ns.h	/^    CNumber EpsCst;   \/\/\/< precision for comparing arc costs$/;"	m	struct:MCFS
+EpsDfct	ns.h	/^    FNumber EpsDfct;  \/\/\/< precision for comparing node deficits$/;"	m	struct:MCFS
+EpsFlw	ns.h	/^    FNumber EpsFlw;   \/\/\/< precision for comparing arc flows \/ capacities$/;"	m	struct:MCFS
+EpsOpt	ns.h	/^    FONumber EpsOpt;               \/\/ the precision of the objective function value$/;"	m	struct:MCFS
+FNumber	ns.h	/^typedef double          FNumber;        \/\/\/< type of arc flow$/;"	t
+FONumber	ns.h	/^typedef double          FONumber;$/;"	t
+FRow	ns.h	/^typedef FNumber        *FRow;           \/\/\/< vector of flows$/;"	t
+Father	ns.cpp	/^N* MCFS::Father( N *n, A *a )$/;"	f	class:MCFS
+FinalMincost	deploy.cpp	/^int FinalMincost(int s,int t,MCMF *cdn,char *output){$/;"	f
+FinalSetServer	deploy.cpp	/^inline void FinalSetServer(ga_vector &population,MCMF * cdn,char * output)$/;"	f
+FinalSolver	deploy.cpp	/^int FinalSolver(ga_struct citizen,MCMF *cdn,char *output){$/;"	f
+FlowCheck	deploy.h	/^    bool FlowCheck(int flow){$/;"	f	struct:mcmf
+G	deploy.h	/^    vector<int> G[MAX]; $/;"	m	struct:mcmf
+GA_ELITRATE	deploy.h	26;"	d
+GA_MAXITER	deploy.h	31;"	d
+GA_MUTATION	deploy.h	29;"	d
+GA_MUTATIONRATE	deploy.h	27;"	d
+GA_POPSIZE	deploy.h	30;"	d
+GA_TARSIZE	deploy.cpp	/^int  GA_TARSIZE = 0;$/;"	v
+GEZ	ns.h	/^bool GEZ( T x, const T eps )$/;"	f
+GT	ns.h	/^bool GT( T x, T y, const T eps )$/;"	f
+GTZ	ns.h	/^bool GTZ( T x, const T eps )$/;"	f
+Ga_For_MCF	deploy.cpp	/^void Ga_For_MCF(MCFS * f_cdn,graph_init * clean_graph,char * output){$/;"	f
+GetFO	ns.cpp	/^FONumber MCFS::GetFO( void )$/;"	f	class:MCFS
+GetTop	deploy.h	/^    QElemType GetTop()  $/;"	f	struct:LinkQueue
+INF	deploy.h	24;"	d
+INLINE	io.cpp	13;"	d	file:
+Index	ns.h	/^typedef unsigned int    Index;           \/\/\/< index of a node or arc ( >= 0 )$/;"	t
+Index_Set	ns.h	/^typedef Index          *Index_Set;       \/\/\/< set (array) of indices$/;"	t
+Inf	ns.h	/^    Inf() {}$/;"	f	class:Inf
+Inf	ns.h	/^class Inf$/;"	c
+InitBase	ns.cpp	/^void MCFS::InitBase(void)$/;"	f	class:MCFS
+InitNet	ns.cpp	/^void MCFS::InitNet(graph_init *graph)$/;"	f	class:MCFS
+InitializePrimalCandidateList	ns.cpp	/^void MCFS::InitializePrimalCandidateList( void )$/;"	f	class:MCFS
+InsertServer	deploy.cpp	/^void InsertServer(MCMF * cdn,vector<int> server_id){$/;"	f
+InsertServer	deploy.h	/^    void InsertServer(vector<int> server_id){$/;"	f	struct:mcmf
+LEZ	ns.h	/^bool LEZ( T x, const T eps )$/;"	f
+LT	ns.h	/^bool LT( T x, T y, const T eps )$/;"	f
+LTZ	ns.h	/^bool LTZ( T x, const T eps )$/;"	f
+LinkQueue	deploy.h	/^typedef struct LinkQueue$/;"	s
+LinkQueue	deploy.h	/^}LinkQueue;  $/;"	t	typeref:struct:LinkQueue
+MAX	deploy.h	23;"	d
+MAX_ART_COST	ns.h	/^    CNumber MAX_ART_COST;          \/\/ large cost for artificial arcs$/;"	m	struct:MCFS
+MAX_EDGE_NUM	lib/lib_io.h	4;"	d
+MAX_LINE_LEN	io.cpp	11;"	d	file:
+MAX_NODE_NUM	ns.h	18;"	d
+MCFGetFO	ns.h	/^    FONumber MCFGetFO( void )$/;"	f	struct:MCFS
+MCFS	ns.h	/^    MCFS( cIndex nmx = 0, cIndex mmx = 0 )$/;"	f	struct:MCFS
+MCFS	ns.h	/^struct MCFS$/;"	s
+MCFStatus	ns.h	/^enum MCFStatus { kUnSolved = -1,  \/\/\/< no solution available$/;"	g
+MCMF	deploy.h	/^typedef struct mcmf MCMF;$/;"	t	typeref:struct:mcmf
+MFCSolver	deploy.cpp	/^inspire_interface  MFCSolver(MCFS *cdn,vector<int> server,graph_init* clean_graph){    \/\/input : serverid   output : cost$/;"	f
+MaxIter	ns.h	/^    int MaxIter;      \/\/\/< max number of iterations in which MCF Solver can find$/;"	m	struct:MCFS
+MaxTime	ns.h	/^    double MaxTime;   \/\/\/< max time (in seconds) in which MCF Solver can find$/;"	m	struct:MCFS
+MemAlloc	ns.cpp	/^void MCFS::MemAlloc( void )$/;"	f	class:MCFS
+MemAllocCandidateList	ns.cpp	/^void MCFS::MemAllocCandidateList(void) \/\/对于不同规模的图，使用不同的候选者ule参数$/;"	f	class:MCFS
+MemDeAlloc	ns.cpp	/^void MCFS::MemDeAlloc(void)$/;"	f	class:MCFS
+Mincost	deploy.cpp	/^int Mincost(int s,int t,MCMF *cdn){$/;"	f
+NetId	deploy.h	/^    int NetId;$/;"	m	struct:QElemType
+PRIMAL_HIGH_HOT_LIST_SIZE	ns.h	/^static const int PRIMAL_HIGH_HOT_LIST_SIZE =  20;$/;"	v
+PRIMAL_HIGH_NUM_CANDIDATE_LIST	ns.h	/^static const int PRIMAL_HIGH_NUM_CANDIDATE_LIST =  200;$/;"	v
+PRIMAL_LOW_HOT_LIST_SIZE	ns.h	/^static const int PRIMAL_LOW_HOT_LIST_SIZE =  5;$/;"	v
+PRIMAL_LOW_NUM_CANDIDATE_LIST	ns.h	/^static const int PRIMAL_LOW_NUM_CANDIDATE_LIST =  30;$/;"	v
+PRIMAL_MEDIUM_HOT_LIST_SIZE	ns.h	/^static const int PRIMAL_MEDIUM_HOT_LIST_SIZE =  10;$/;"	v
+PRIMAL_MEDIUM_NUM_CANDIDATE_LIST	ns.h	/^static const int PRIMAL_MEDIUM_NUM_CANDIDATE_LIST =  50;$/;"	v
+PRINT	io.cpp	15;"	d	file:
+PRINT	io.cpp	17;"	d	file:
+PRuleFirstEligibleArc	ns.cpp	/^arcPType* MCFS::PRuleFirstEligibleArc( void )$/;"	f	class:MCFS
+PasteSubtree	ns.cpp	/^void MCFS::PasteSubtree( N *root, N *lastNode, N *previousNode )$/;"	f	class:MCFS
+PrimalSimplex	ns.cpp	/^void MCFS::PrimalSimplex( void )$/;"	f	class:MCFS
+PrintPArc	ns.cpp	/^void MCFS::PrintPArc( arcPType *arc )$/;"	f	class:MCFS
+PrintPNode	ns.cpp	/^void MCFS::PrintPNode( nodePType *nodo )$/;"	f	class:MCFS
+QElemType	deploy.h	/^typedef struct QElemType$/;"	s
+QElemType	deploy.h	/^}QElemType;$/;"	t	typeref:struct:QElemType
+QNode	deploy.h	/^typedef struct QNode  $/;"	s
+QNode	deploy.h	/^}QNode, *QueuePtr;  $/;"	t	typeref:struct:QNode
+Qswap	deploy.h	/^    void Qswap(LinkQueue &P){$/;"	f	struct:LinkQueue
+QueuePtr	deploy.h	/^}QNode, *QueuePtr;  $/;"	t	typeref:struct:QNode
+ReadData	ns.cpp	/^void MCFS::ReadData(char * topo[MAX_EDGE_NUM],int line_num,graph_init *graph)$/;"	f	class:MCFS
+ReductCost	ns.cpp	/^CNumber MCFS::ReductCost( A *a )$/;"	f	class:MCFS
+RuleDantzig	ns.cpp	/^arcPType* MCFS::RuleDantzig( void )$/;"	f	class:MCFS
+RulePrimalCandidateListPivot	ns.cpp	/^arcPType* MCFS::RulePrimalCandidateListPivot( void )$/;"	f	class:MCFS
+SIndex	ns.h	/^typedef int             SIndex;           \/\/\/< index of a node or arc$/;"	t
+SIndex_Set	ns.h	/^typedef SIndex         *SIndex_Set;       \/\/\/< set (array) of indices$/;"	t
+SaveCustomer	deploy.h	/^    void SaveCustomer(int customer,int netnode){ $/;"	f	struct:mcmf
+SearchCustomer	deploy.h	/^    void SearchCustomer(vector<int> &customer){$/;"	f	struct:mcmf
+ServerCheck	deploy.h	/^    vector<int> ServerCheck(){$/;"	f	struct:mcmf
+SetParent	deploy.cpp	/^int SetParent(ga_vector &population){$/;"	f
+ShowSituation	ns.cpp	/^void MCFS::ShowSituation( int tab )$/;"	f	class:MCFS
+SortPrimalCandidateList	ns.cpp	/^void MCFS::SortPrimalCandidateList( Index min, Index max )$/;"	f	class:MCFS
+Swap	ns.h	/^void Swap( T &v1, T &v2 )$/;"	f
+TIME_LIMIT	deploy.cpp	/^int TIME_LIMIT = 70;$/;"	v
+UNIPI_PRIMAL_FINAL_SHOW	ns.h	21;"	d
+UNIPI_PRIMAL_ITER_SHOW	ns.h	20;"	d
+UpdateT	ns.cpp	/^void MCFS::UpdateT( A *h, A *k, N *h1, N *h2, N *k1, N *k2 )$/;"	f	class:MCFS
+__LIB_IO_H__	lib/lib_io.h	2;"	d
+__LIB_TIME_H__	lib/lib_time.h	2;"	d
+__ns_h__	ns.h	2;"	d
+__route_h__	deploy.h	2;"	d
+a	deploy.h	/^    int a[MAX]; $/;"	m	struct:mcmf
+absRC	ns.h	/^    CNumber absRC;           \/\/ absolute value of the arc's reduced cost$/;"	m	struct:primalCandidType
+arc	ns.h	/^    arcPType *arc;            \/\/ pointer to the violating primal bound arc$/;"	m	struct:primalCandidType
+arcPType	ns.h	/^struct arcPType$/;"	s
+arcToStartP	ns.h	/^    arcPType *arcToStartP;         \/\/ Dantzig Rule and First Eligible Arc Rule$/;"	m	struct:MCFS
+arcsP	ns.h	/^    arcPType *arcsP;               \/\/ vector of arcs; this variable points to$/;"	m	struct:MCFS
+balance	ns.h	/^    FNumber balance;        \/\/ supply\/demand of this node; a node is called a$/;"	m	struct:nodePType
+cCNumber	ns.h	/^typedef const CNumber  cCNumber;        \/\/\/< a read-only cost$/;"	t
+cCRow	ns.h	/^typedef cCNumber      *cCRow;           \/\/\/< read-only cost array$/;"	t
+cFNumber	ns.h	/^typedef const FNumber  cFNumber;        \/\/\/< a read-only flow$/;"	t
+cFONumber	ns.h	/^typedef const FONumber cFONumber;       \/\/\/< a read-only o.f. value$/;"	t
+cFRow	ns.h	/^typedef cFNumber      *cFRow;           \/\/\/< read-only flow array$/;"	t
+cIndex	ns.h	/^typedef const Index    cIndex;           \/\/\/< a read-only index$/;"	t
+cIndex_Set	ns.h	/^typedef cIndex        *cIndex_Set;       \/\/\/< read-only index array$/;"	t
+cSIndex	ns.h	/^typedef const SIndex   cSIndex;           \/\/\/< a read-only index$/;"	t
+cSIndex_Set	ns.h	/^typedef cSIndex       *cSIndex_Set;       \/\/\/< read-only index array$/;"	t
+calc_fitness	deploy.cpp	/^inline void calc_fitness(ga_vector &population,graph_init *clean_graph)$/;"	f
+candP	ns.h	/^    primalCandidType *candP;       \/\/ every element points to an element of the$/;"	m	struct:MCFS
+cap	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+clear	deploy.h	/^    void clear()  $/;"	f	struct:LinkQueue
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:ga_struct
+clearup	deploy.h	/^    void clearup(){$/;"	f	struct:mcmf
+copy	deploy.h	/^    void copy(MCMF *cdn){$/;"	f	struct:mcmf
+cost	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+cost	ns.h	/^    CNumber cost;           \/\/ arc linear cost$/;"	m	struct:arcPType
+cus	deploy.h	/^    int cus[MAX];$/;"	m	struct:mcmf
+d	deploy.h	/^    int d[MAX]; $/;"	m	struct:mcmf
+data	deploy.h	/^    QElemType data;  $/;"	m	struct:QNode
+de_Queue	deploy.h	/^    void de_Queue()  $/;"	f	struct:LinkQueue
+de_Queue_where	deploy.h	/^    void de_Queue_where(int aver,QElemType &out)  $/;"	f	struct:LinkQueue
+deploy_server	deploy.cpp	/^void deploy_server(char * topo[MAX_EDGE_NUM], int line_num,char * filename)$/;"	f
+dist	deploy.h	/^    int dist;$/;"	m	struct:QElemType
+dummyArcsP	ns.h	/^    arcPType *dummyArcsP;          \/\/ vector of artificial dummy arcs: points$/;"	m	struct:MCFS
+dummyRootP	ns.h	/^    nodePType *dummyRootP;         \/\/ the dummy root node$/;"	m	struct:MCFS
+edge	deploy.h	/^struct edge{$/;"	s
+edge_check	deploy.h	/^    void edge_check(Edge * e){$/;"	f	struct:mcmf
+edges	deploy.h	/^    vector<Edge> edges; $/;"	m	struct:mcmf
+elitism	deploy.cpp	/^void elitism(ga_vector &population, ga_vector &buffer, int esize ){$/;"	f
+en_Queue_Rear	deploy.h	/^    void en_Queue_Rear(QElemType e)  $/;"	f	struct:LinkQueue
+en_Queue_Top	deploy.h	/^    void en_Queue_Top(QElemType e)  $/;"	f	struct:LinkQueue
+enteringTArc	ns.h	/^    arcPType *enteringTArc; \/\/ entering basic arc of this node$/;"	m	struct:nodePType
+enumPrcngRl	ns.h	/^enum enumPrcngRl$/;"	g
+fitness	deploy.h	/^	int fitness;					\/\/ its fitness$/;"	m	struct:ga_struct
+fitness_sort	deploy.cpp	/^inline bool fitness_sort(ga_struct x, ga_struct y) {$/;"	f
+flow	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+flow	ns.h	/^    FNumber flow;           \/\/ arc flow$/;"	m	struct:arcPType
+forcedHotListSize	ns.h	/^    Index forcedHotListSize;       \/\/ value used to force the number of candidate list$/;"	m	struct:MCFS
+forcedNumCandidateList	ns.h	/^    Index forcedNumCandidateList;  \/\/ value used to force the number of candidate list$/;"	m	struct:MCFS
+from	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+front	deploy.h	/^    QueuePtr front;  $/;"	m	struct:LinkQueue
+ga_struct	deploy.h	/^struct ga_struct $/;"	s
+ga_vector	deploy.h	/^typedef vector<ga_struct> ga_vector;\/\/ for brevity$/;"	t
+getlength_Queue	deploy.h	/^    int getlength_Queue()  $/;"	f	struct:LinkQueue
+graph_init	ns.h	/^    graph_init() {}$/;"	f	struct:graph_init
+graph_init	ns.h	/^struct graph_init$/;"	s
+groupPos	ns.h	/^    Index groupPos;                \/\/ contains the actual candidate list$/;"	m	struct:MCFS
+head	ns.h	/^    nodePType *head;        \/\/ head node$/;"	m	struct:arcPType
+hotListSize	ns.h	/^    Index hotListSize;             \/\/ number of candidate lists and hot list dimension$/;"	m	struct:MCFS
+ident	ns.h	/^    char ident;             \/\/ tells if arc is deleted, closed, in T, L, or U$/;"	m	struct:arcPType
+infoPArc	ns.cpp	/^void MCFS::infoPArc( arcPType *arc, int ind, int tab )$/;"	f	class:MCFS
+infoPNode	ns.cpp	/^void MCFS::infoPNode( nodePType *node, int tab )$/;"	f	class:MCFS
+init	deploy.h	/^    void init(int n){ $/;"	f	struct:mcmf
+init_Queue	deploy.h	/^    void init_Queue()  $/;"	f	struct:LinkQueue
+init_key_serevr	deploy.cpp	/^ga_struct init_key_serevr(MCMF *cdn){$/;"	f
+init_population	deploy.cpp	/^void init_population(ga_vector &population, ga_vector &buffer) $/;"	f
+inq	deploy.h	/^    int inq[MAX]; $/;"	m	struct:mcmf
+inspire_interface	ns.h	/^struct inspire_interface$/;"	s
+is_Empty	deploy.h	/^    int is_Empty()  $/;"	f	struct:LinkQueue
+is_first_calcu	deploy.cpp	/^int is_first_calcu = 1;$/;"	v
+item_num	deploy.h	/^    int item_num;$/;"	m	struct:LinkQueue
+iteratorType	ns.h	/^typedef double iteratorType;  \/\/ type for the iteration counter and array$/;"	t
+iterator_qiwei	ns.h	/^    iteratorType iterator_qiwei;         \/\/ the current number of iterations$/;"	m	struct:MCFS
+kCandidateListPivot	ns.h	/^    kCandidateListPivot  \/\/\/< Candidate List Pivot Rule$/;"	e	enum:enumPrcngRl
+kDantzig	ns.h	/^    kDantzig = 0,        \/\/\/< Dantzig's rule (most violated constraint)$/;"	e	enum:enumPrcngRl
+kError	ns.h	/^                 kError           \/\/\/< error in the solver$/;"	e	enum:MCFStatus
+kFirstEligibleArc	ns.h	/^    kFirstEligibleArc,   \/\/\/< First eligible arc in round-robin$/;"	e	enum:enumPrcngRl
+kOK	ns.h	/^                 kOK = 0,         \/\/\/< optimal solution found$/;"	e	enum:MCFStatus
+kStopped	ns.h	/^                 kStopped,        \/\/\/< optimization stopped$/;"	e	enum:MCFStatus
+kUnSolved	ns.h	/^enum MCFStatus { kUnSolved = -1,  \/\/\/< no solution available$/;"	e	enum:MCFStatus
+kUnbounded	ns.h	/^                 kUnbounded,      \/\/\/< problem is unbounded$/;"	e	enum:MCFStatus
+kUnfeasible	ns.h	/^                 kUnfeasible,     \/\/\/< problem is unfeasible$/;"	e	enum:MCFStatus
+link_cost	ns.h	/^    int link_cost;	\/\/MCFS算完的立链路上的cost$/;"	m	struct:inspire_interface
+m	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+m	ns.h	/^    Index m;      \/\/\/< total number of arcs$/;"	m	struct:MCFS
+main	cdn.cpp	/^int main(int argc, char *argv[])$/;"	f
+mate	deploy.cpp	/^void mate(ga_vector &population, ga_vector &buffer){$/;"	f
+mcmf	deploy.h	/^struct mcmf{ $/;"	s
+mmax	ns.h	/^    Index mmax;   \/\/\/< maximum number of arcs$/;"	m	struct:MCFS
+modifiedBalance	ns.h	/^    FNumber *modifiedBalance;      \/\/ vector of balance used by the PostVisit$/;"	m	struct:MCFS
+mutate	deploy.cpp	/^inline void mutate(ga_struct &member){$/;"	f
+n	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+n	ns.h	/^    Index n;      \/\/\/< total number of nodes$/;"	m	struct:MCFS
+newSession	ns.h	/^    bool newSession;               \/\/ true if algorithm is just started$/;"	m	struct:MCFS
+next	deploy.h	/^    struct QNode *next;  $/;"	m	struct:QNode	typeref:struct:QNode::QNode
+nextInT	ns.h	/^    nodePType *nextInT;     \/\/ next node in the order of the Post-Visit on T$/;"	m	struct:nodePType
+nmax	ns.h	/^    Index nmax;   \/\/\/< maximum number of nodes$/;"	m	struct:MCFS
+nodePType	ns.h	/^struct nodePType$/;"	s
+nodesP	ns.h	/^    nodePType *nodesP;             \/\/ vector of nodes: points to the n + 1 node$/;"	m	struct:MCFS
+numCandidateList	ns.h	/^    Index numCandidateList;        \/\/ number of candidate lists$/;"	m	struct:MCFS
+numGroup	ns.h	/^    Index numGroup;                \/\/ number of the candidate lists$/;"	m	struct:MCFS
+operator =	ns.h	/^    void operator=(graph_init *a)$/;"	f	struct:graph_init
+operator T	ns.h	/^    operator T()$/;"	f	class:Eps
+operator T	ns.h	/^    operator T()$/;"	f	class:Inf
+p	deploy.h	/^    int p[MAX]; $/;"	m	struct:mcmf
+potential	ns.h	/^    CNumber potential;      \/\/ the node potential corresponding with the flow$/;"	m	struct:nodePType
+prevInT	ns.h	/^    nodePType *prevInT;     \/\/ previous node in the order of the Post-Visit on T$/;"	m	struct:nodePType
+pricingRule	ns.h	/^    char pricingRule;              \/\/ which pricing rule is used$/;"	m	struct:MCFS
+primalCandidType	ns.h	/^struct primalCandidType    \/\/ Primal Candidate List- - - - - - - - - - - - -$/;"	s
+print_Queue	deploy.h	/^    void print_Queue()  $/;"	f	struct:LinkQueue
+print_best	deploy.cpp	/^inline void print_best(ga_vector &gav)$/;"	f
+print_ga	deploy.h	/^    void print_ga(){$/;"	f	struct:ga_struct
+print_time	io.cpp	/^void print_time(const char *head)$/;"	f
+qiwei_server_used	ns.h	/^    void qiwei_server_used(inspire_interface* inter)$/;"	f	struct:MCFS
+qiwei_solve	ns.h	/^    void qiwei_solve(inspire_interface* inter)$/;"	f	struct:MCFS
+read_file	io.cpp	/^int read_file(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
+rear	deploy.h	/^    QueuePtr rear;  $/;"	m	struct:LinkQueue
+recomputeFOLimits	ns.h	/^    int recomputeFOLimits;         \/\/ after how many iterations the quadratic Primal$/;"	m	struct:MCFS
+release_buff	io.cpp	/^void release_buff(char ** const buff, const int valid_item_num)$/;"	f
+s	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+server	deploy.h	/^	string  server;			\/\/ 1:biuld server here ;  0:not$/;"	m	struct:ga_struct
+serverNum	deploy.h	/^	int serverNum;$/;"	m	struct:ga_struct
+server_balance	ns.h	/^    vector<int> server_balance;	\/\/用到的server上的balance$/;"	m	struct:inspire_interface
+server_cost	deploy.h	/^    int server_cost;$/;"	m	struct:mcmf
+server_cost	ns.h	/^    int server_cost;$/;"	m	struct:graph_init
+server_id	deploy.h	/^	vector<int> server_id;$/;"	m	struct:ga_struct
+server_list	ns.h	/^    vector<int> server_list;	\/\/启发式给定的server list$/;"	m	struct:inspire_interface
+server_used	ns.h	/^    vector<int> server_used;	\/\/用到的server$/;"	m	struct:inspire_interface
+sort_by_fitness	deploy.cpp	/^inline void sort_by_fitness(ga_vector &population){ $/;"	f
+status	ns.h	/^    int status;   \/\/\/< return status, see the comments to MCFGetStatus() above.$/;"	m	struct:MCFS
+stopArcsP	ns.h	/^    arcPType *stopArcsP;           \/\/ first infeasible arc address = arcs + m$/;"	m	struct:MCFS
+stopDummyP	ns.h	/^    arcPType *stopDummyP;          \/\/ first infeasible dummy arc address$/;"	m	struct:MCFS
+stopNodesP	ns.h	/^    nodePType *stopNodesP;         \/\/ first infeasible node address = nodes + n$/;"	m	struct:MCFS
+subTreeLevel	ns.h	/^    int subTreeLevel;        \/\/ the depth of the node in T as to T root$/;"	m	struct:nodePType
+sum	deploy.h	/^    long long sum;$/;"	m	struct:LinkQueue
+swap	deploy.cpp	/^inline void swap(ga_vector *&population, ga_vector *&buffer){ $/;"	f
+t	deploy.h	/^    int n,m,s,t; \/\/n:v_num   m:e_num$/;"	m	struct:mcmf
+tC	ns.h	/^    vector<CNumber>  tC;  \/\/ arc costs$/;"	m	struct:graph_init
+tDfct	ns.h	/^    vector<FNumber>  tDfct;  \/\/ node deficits     node的收支$/;"	m	struct:graph_init
+tEndn	ns.h	/^    vector<Index> tEndn;    \/\/ arc end nodes$/;"	m	struct:graph_init
+tStartn	ns.h	/^    vector<Index> tStartn;    \/\/ arc start nodes$/;"	m	struct:graph_init
+tU	ns.h	/^    vector<FNumber>  tU;  \/\/ arc upper capacities$/;"	m	struct:graph_init
+tail	ns.h	/^    nodePType *tail;        \/\/ tail node$/;"	m	struct:arcPType
+tempCandidateListSize	ns.h	/^    Index tempCandidateListSize;   \/\/ hot list dimension (it is variable)$/;"	m	struct:MCFS
+test	deploy.h	/^    void test(){$/;"	f	struct:mcmf
+tm	ns.h	/^    Index tm;$/;"	m	struct:graph_init
+tn	ns.h	/^    Index tn;$/;"	m	struct:graph_init
+to	deploy.h	/^    int from,to,cap,flow,cost;$/;"	m	struct:edge
+topo_init	deploy.cpp	/^void topo_init(char * topo[MAX_EDGE_NUM],int line_num,MCMF * cdn){$/;"	f
+upper	ns.h	/^    FNumber upper;          \/\/ arc upper bound$/;"	m	struct:arcPType
+usePrimalSimplex	ns.h	/^    bool usePrimalSimplex;         \/\/ TRUE if the Primal Network Simplex is used$/;"	m	struct:MCFS
+write_file	io.cpp	/^INLINE void write_file(const bool cover, const char * const buff, const char * const filename)$/;"	f
+write_result	io.cpp	/^void write_result(const char * const buff,const char * const filename)$/;"	f
